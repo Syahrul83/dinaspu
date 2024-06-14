@@ -1,0 +1,89 @@
+#header .header-body {
+	display: flex;
+	flex-direction: column;
+	background: #FFF;
+	transition: min-height 0.3s ease;
+	width: 100%;
+	border-top: 3px solid #EDEDED;
+	z-index: 1001;
+	border-bottom: 7px solid #FFC928;
+}
+
+#header .header-body.header-body-bottom-border-fixed {
+	border-bottom: 7px solid #FFC928 !important;
+}
+
+.img-landing {
+    box-sizing: border-box;
+    display: block;
+    object-fit:cover ;
+    width: 340px;
+    height: 210px;
+    border-radius: 5px;
+    border-bottom-right-radius: 50px;
+    border-bottom: 5px solid #fbb717;
+
+}
+
+.img-landing-newsb {
+    box-sizing: border-box;
+    display: block;
+    object-fit:cover ;
+    border-radius: 5px;
+    border-bottom: 3px solid #fbb717;
+    /*width: 345px;*/
+    height: 145px;
+}
+
+.thumb-gallery-foto img {
+	transition: all 0.3s ease;
+	border-radius: 3px;
+	position: relative;
+	width: 100%;
+    display: block;
+    height: 280px;
+    object-fit:cover ;
+}
+
+.thumb-bulletin img {
+	transition: all 0.3s ease;
+	border-radius: 3px;
+	position: relative;
+	width: 100%;
+    display: block;
+    height: 600px;
+    object-fit:cover ;
+}
+
+.thumb-info.thumb-info-bottom-info-primary .thumb-info-title {
+	background: #47648B;
+    color: #FFF;
+    border-top: 8px solid #FFC928;
+    border-top-right-radius: 100px;
+}
+
+.card-side{
+    color:#FFF;
+    padding: .5rem 1rem;
+    margin-bottom: 0;
+    border-bottom-right-radius: 50px;
+    border-top: 8px solid #FFC928;
+    border-right:8px solid #FFC928;
+}
+
+.owl-carousel .carousel-caption-pe .owl-stage-outer {
+    margin-left: 0px !important;
+}
+
+.icon-direktorat {
+    width: calc(100%/9);
+    display: inline-block;
+    float: left;
+    padding: 1px 2%;
+}
+
+@media (max-width: 575px) {
+	.icon-direktorat {
+		width: 50%;
+	}
+}
