@@ -2,16 +2,17 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\PostResource\Pages;
-use App\Filament\Resources\PostResource\RelationManagers;
-use App\Models\Post;
 use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
+use App\Models\Post;
 use Filament\Tables;
+use App\Models\Kategori;
+use Filament\Forms\Form;
 use Filament\Tables\Table;
+use Filament\Resources\Resource;
 use Illuminate\Database\Eloquent\Builder;
+use App\Filament\Resources\PostResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\PostResource\RelationManagers;
 
 class PostResource extends Resource
 {
@@ -35,11 +36,22 @@ class PostResource extends Resource
                 Forms\Components\TextInput::make('body'),
                 Forms\Components\FileUpload::make('image')
                     ->image(),
-                Forms\Components\TextInput::make('kategori_id'),
-                Forms\Components\TextInput::make('user_id')
+
+                Forms\Components\Select::make('kategori_id')
+                    ->label('Kategori')
+                    ->options(Kategori::all()->where('active', 1)->pluck('title', 'id'))
                     ->required(),
-                Forms\Components\TextInput::make('status')
-                    ->required(),
+                Forms\Components\Hidden::make('user_id')
+                    ->default(auth()->user()->id)
+                ,
+
+                Forms\Components\Select::make('status')
+                    ->default('draft')
+                    ->options([
+                        'draft' => 'Draft',
+                        'publish' => 'Publish',
+
+                    ])
             ]);
     }
 
@@ -50,9 +62,8 @@ class PostResource extends Resource
                 Tables\Columns\TextColumn::make('No')->rowIndex(),
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('body')
-                    ->searchable(),
-                Tables\Columns\ImageColumn::make('image'),
+
+
                 Tables\Columns\TextColumn::make('kategori_id')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('user_id')

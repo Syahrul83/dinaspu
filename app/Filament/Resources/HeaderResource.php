@@ -32,7 +32,7 @@ class HeaderResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('title'),
+                Forms\Components\TextInput::make('title')->required(),
                 Forms\Components\FileUpload::make('image')
                     ->image()
                     ->directory('web-header')

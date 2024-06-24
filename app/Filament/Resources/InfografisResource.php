@@ -31,7 +31,7 @@ class InfografisResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('title'),
+                Forms\Components\TextInput::make('title')->required(),
                 Forms\Components\FileUpload::make('image')
                     ->image()
                     ->directory('slider-infografis')
