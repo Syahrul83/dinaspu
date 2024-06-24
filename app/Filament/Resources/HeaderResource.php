@@ -2,16 +2,18 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\HeaderResource\Pages;
-use App\Filament\Resources\HeaderResource\RelationManagers;
-use App\Models\Header;
 use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
+use App\Models\Header;
+use Filament\Forms\Form;
 use Filament\Tables\Table;
+use Filament\Resources\Resource;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Builder;
+use App\Filament\Resources\HeaderResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\HeaderResource\RelationManagers;
 
 class HeaderResource extends Resource
 {
@@ -19,13 +21,22 @@ class HeaderResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    protected static ?string $navigationGroup = 'Halaman Depan';
+
+    protected static ?string $navigationLabel = 'Slider Header Web';
+
+    protected ?string $heading = 'Slider Header Web';
+
+
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Forms\Components\TextInput::make('title'),
-                Forms\Components\Textarea::make('image')
-                    ->columnSpanFull(),
+                Forms\Components\FileUpload::make('image')
+                    ->image()
+                    ->directory('web-header')
+                    ->maxSize(2024),
             ]);
     }
 
@@ -33,8 +44,11 @@ class HeaderResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('No')->rowIndex(),
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
+                Tables\Columns\ImageColumn::make('image')
+                    ->width(200),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -43,16 +57,21 @@ class HeaderResource extends Resource
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-            ])
+            ])->defaultSort('id', 'desc')
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make()
+                    ->requiresConfirmation()
+                    ->before(function (Model $record) {
+                        Storage::disk('public')->delete($record->image);
+                    })
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                    // Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
     }
@@ -68,8 +87,8 @@ class HeaderResource extends Resource
     {
         return [
             'index' => Pages\ListHeaders::route('/'),
-            'create' => Pages\CreateHeader::route('/create'),
-            'edit' => Pages\EditHeader::route('/{record}/edit'),
+            // 'create' => Pages\CreateHeader::route('/create'),
+            // 'edit' => Pages\EditHeader::route('/{record}/edit'),
         ];
     }
 }
