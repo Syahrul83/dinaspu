@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\PostResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\PostResource\RelationManagers;
+use AmidEsfahani\FilamentTinyEditor\TinyEditor;
 
 class PostResource extends Resource
 {
@@ -33,7 +34,18 @@ class PostResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('title'),
-                Forms\Components\TextInput::make('body'),
+                // Forms\Components\MarkdownEditor::make('body')
+                //     ->fileAttachmentsDisk('public')
+                //     ->fileAttachmentsDirectory('post')
+                //     ->fileAttachmentsVisibility('public'),
+                TinyEditor::make('body')
+                    ->fileAttachmentsDisk('public')
+                    ->fileAttachmentsVisibility('public')
+                    ->fileAttachmentsDirectory('uploads')
+                    ->profile('default')
+                    ->ltr() // Set RTL or use ->direction('auto|rtl|ltr')
+                    ->columnSpan('full')
+                    ->required(),
                 Forms\Components\FileUpload::make('image')
                     ->image(),
 
