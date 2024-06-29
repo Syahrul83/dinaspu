@@ -32,6 +32,14 @@ return [
             'upload_directory' => null,
         ],
 
+        'custom' => [
+            'plugins' => 'accordion autoresize codesample directionality advlist link image lists preview pagebreak searchreplace wordcount code fullscreen insertdatetime media table emoticons',
+            'toolbar' => 'undo redo removeformat | fontsizeinput font_size_formats styles | bold italic underline |  ltr | alignjustify alignleft aligncenter alignright | image link media codesample emoticons| numlist bullist outdent indent | forecolor backcolor | blockquote table toc hr  | fullscreen',
+            'upload_directory' => null,
+        ],
+
+
+
         'simple' => [
             'plugins' => 'autoresize directionality emoticons link wordcount',
             'toolbar' => 'removeformat | bold italic | rtl ltr | numlist bullist | link emoticons',
