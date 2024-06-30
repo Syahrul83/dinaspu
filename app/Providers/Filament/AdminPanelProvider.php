@@ -54,7 +54,7 @@ class AdminPanelProvider extends PanelProvider
             ->navigationGroups([
                 'Halaman Depan',
                 'Berita & Informasi',
-                'Stok Barang',
+                'Menu & Halaman',
                 'Settings',
             ])
             ->authMiddleware([

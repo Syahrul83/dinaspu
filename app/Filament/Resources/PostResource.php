@@ -18,6 +18,7 @@ use App\Filament\Resources\PostResource\Pages;
 use AmidEsfahani\FilamentTinyEditor\TinyEditor;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\PostResource\RelationManagers;
+use App\Filament\Resources\PostResource\Widgets\StatsOverview;
 
 class PostResource extends Resource
 {
@@ -144,6 +145,14 @@ class PostResource extends Resource
     {
         return [
             //
+        ];
+    }
+
+
+    public static function getWidgets(): array
+    {
+        return [
+            StatsOverview::class,
         ];
     }
 

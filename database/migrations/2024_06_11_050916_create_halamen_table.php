@@ -13,11 +13,10 @@ return new class extends Migration {
         Schema::create('halamen', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
-            $table->string('slug')->nullable();
             $table->string('body')->nullable();
             $table->string('image')->nullable();
             $table->string('user_id');
-            $table->enum('status', ['publish', 'draft'])->default('publish');
+            $table->boolean('active')->default(true);
             $table->timestamps();
         });
     }

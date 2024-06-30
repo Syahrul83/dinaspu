@@ -18,7 +18,13 @@ class MenuLinkResource extends Resource
     protected static ?string $model = MenuLink::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup = 'Menu & Halaman';
 
+    protected static ?string $navigationLabel = 'Menu Link';
+
+    protected ?string $heading = 'Menu Link';
+
+    protected static ?int $navigationSort = 2;
     public static function form(Form $form): Form
     {
         return $form

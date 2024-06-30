@@ -2,16 +2,17 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\HalamanResource\Pages;
-use App\Filament\Resources\HalamanResource\RelationManagers;
-use App\Models\Halaman;
 use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
+use App\Models\Halaman;
+use Filament\Forms\Form;
 use Filament\Tables\Table;
+use Filament\Resources\Resource;
 use Illuminate\Database\Eloquent\Builder;
+use AmidEsfahani\FilamentTinyEditor\TinyEditor;
+use App\Filament\Resources\HalamanResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\HalamanResource\RelationManagers;
 
 class HalamanResource extends Resource
 {
@@ -19,20 +20,60 @@ class HalamanResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+
+
+    protected static ?string $navigationGroup = 'Menu & Halaman';
+
+    protected static ?string $navigationLabel = 'Halaman';
+
+    protected ?string $heading = 'Halaman';
+
+    protected static ?int $navigationSort = 1;
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('title'),
-                Forms\Components\TextInput::make('slug'),
-                Forms\Components\TextInput::make('body'),
-                Forms\Components\FileUpload::make('image')
-                    ->image(),
-                Forms\Components\TextInput::make('user_id')
-                    ->required(),
-                Forms\Components\TextInput::make('status')
-                    ->required(),
-            ]);
+                Forms\Components\Group::make()
+                    ->schema([
+                        Forms\Components\Section::make()
+                            ->schema([
+                                Forms\Components\TextInput::make('title')
+                                    ->required(),
+                                TinyEditor::make('body')
+                                    ->fileAttachmentsDisk('public')
+                                    ->fileAttachmentsVisibility('public')
+                                    ->fileAttachmentsDirectory('uploads')
+                                    ->profile('custom')
+                                    ->ltr()
+                                    ->columnSpan('full')
+                                    ->required(),
+                            ]),
+                    ])
+                    ->columnSpan(['lg' => 2]),
+                Forms\Components\Group::make()
+                    ->schema([
+                        Forms\Components\Section::make()
+                            ->schema([
+                                Forms\Components\FileUpload::make('image')
+                                    ->image()
+                                    ->directory('halaman')
+                                    ->maxSize(2024),
+                                Forms\Components\Hidden::make('user_id')
+                                    ->default(auth()->user()->id),
+                                Forms\Components\Select::make('status')
+                                    ->default('draft')
+                                    ->options([
+                                        'draft' => 'Draft',
+                                        'publish' => 'Publish',
+
+                                    ]),
+                            ]),
+                    ])
+                    ->columnSpan(['lg' => 1]),
+
+
+            ])->columns(3);
+
     }
 
     public static function table(Table $table): Table
