@@ -8,7 +8,9 @@ use App\Models\Halaman;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
+use Filament\Tables\Columns\ImageColumn;
 use Illuminate\Database\Eloquent\Builder;
+use Filament\Forms\Components\ToggleButtons;
 use AmidEsfahani\FilamentTinyEditor\TinyEditor;
 use App\Filament\Resources\HalamanResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -25,6 +27,7 @@ class HalamanResource extends Resource
     protected static ?string $navigationGroup = 'Menu & Halaman';
 
     protected static ?string $navigationLabel = 'Halaman';
+    protected static ?string $pluralModelLabel = 'Halaman';
 
     protected ?string $heading = 'Halaman';
 
@@ -46,7 +49,7 @@ class HalamanResource extends Resource
                                     ->profile('custom')
                                     ->ltr()
                                     ->columnSpan('full')
-                                    ->required(),
+                                ,
                             ]),
                     ])
                     ->columnSpan(['lg' => 2]),
@@ -60,13 +63,14 @@ class HalamanResource extends Resource
                                     ->maxSize(2024),
                                 Forms\Components\Hidden::make('user_id')
                                     ->default(auth()->user()->id),
-                                Forms\Components\Select::make('status')
-                                    ->default('draft')
+                                Forms\Components\toggleButtons::make('active')
                                     ->options([
-                                        'draft' => 'Draft',
-                                        'publish' => 'Publish',
+                                        '1' => 'Published',
+                                        '0' => 'Draft',
 
-                                    ]),
+
+                                    ])->default('1')
+                                ,
                             ]),
                     ])
                     ->columnSpan(['lg' => 1]),
@@ -80,17 +84,17 @@ class HalamanResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('No')->rowIndex(),
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('slug')
+
+
+                ImageColumn::make('image')
+                    ->height(50),
+                Tables\Columns\TextColumn::make('user.name')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('body')
-                    ->searchable(),
-                Tables\Columns\ImageColumn::make('image'),
-                Tables\Columns\TextColumn::make('user_id')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('status')
-                    ->searchable(),
+                Tables\Columns\ToggleColumn::make('active'),
+
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -108,7 +112,7 @@ class HalamanResource extends Resource
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                    // Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
     }
