@@ -29,7 +29,9 @@ class MenuLinkResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Forms\Components\TextInput::make('title')->required(),
+                Forms\Components\TextInput::make('link'),
+
             ]);
     }
 
@@ -37,6 +39,10 @@ class MenuLinkResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('title')
+                    ->searchable()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('link'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -54,7 +60,7 @@ class MenuLinkResource extends Resource
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                    // Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
     }
@@ -70,8 +76,8 @@ class MenuLinkResource extends Resource
     {
         return [
             'index' => Pages\ListMenuLinks::route('/'),
-            'create' => Pages\CreateMenuLink::route('/create'),
-            'edit' => Pages\EditMenuLink::route('/{record}/edit'),
+            // 'create' => Pages\CreateMenuLink::route('/create'),
+            // 'edit' => Pages\EditMenuLink::route('/{record}/edit'),
         ];
     }
 }
