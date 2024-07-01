@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\MajalahPesutResource\Pages;
-use App\Filament\Resources\MajalahPesutResource\RelationManagers;
-use App\Models\MajalahPesut;
+use App\Filament\Resources\VideoResource\Pages;
+use App\Filament\Resources\VideoResource\RelationManagers;
+use App\Models\Video;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,29 +13,27 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class MajalahPesutResource extends Resource
+class VideoResource extends Resource
 {
-    protected static ?string $model = MajalahPesut::class;
+    protected static ?string $model = Video::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
-
     protected static ?string $navigationGroup = 'Publikasi';
 
-    protected static ?string $navigationLabel = 'Majalah Pesut';
-    protected static ?string $pluralModelLabel = 'Majalah Pesut';
+    protected static ?string $navigationLabel = 'Galeri Video';
+    protected static ?string $pluralModelLabel = 'Galeri Video';
 
-    protected ?string $heading = 'Majalah Pesut';
-
-    protected static ?int $navigationSort = 4;
+    protected ?string $heading = 'Galeri Video';
+    protected static ?int $navigationSort = 8;
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('title'),
-                Forms\Components\TextInput::make('keterangan'),
-                Forms\Components\TextInput::make('file'),
+                Forms\Components\TextInput::make('title')->required(),
+                Forms\Components\Textarea::make('link')
+                    ->columnSpanFull(),
             ]);
     }
 
@@ -44,10 +42,6 @@ class MajalahPesutResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('keterangan')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('file')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
@@ -81,9 +75,9 @@ class MajalahPesutResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListMajalahPesuts::route('/'),
-            'create' => Pages\CreateMajalahPesut::route('/create'),
-            'edit' => Pages\EditMajalahPesut::route('/{record}/edit'),
+            'index' => Pages\ListVideos::route('/'),
+            // 'create' => Pages\CreateVideo::route('/create'),
+            // 'edit' => Pages\EditVideo::route('/{record}/edit'),
         ];
     }
 }

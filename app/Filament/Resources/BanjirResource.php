@@ -19,6 +19,14 @@ class BanjirResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    protected static ?string $navigationGroup = 'Publikasi';
+
+    protected static ?string $navigationLabel = 'Laporan Banjir';
+    protected static ?string $pluralModelLabel = 'Laporan Banjir';
+
+    protected ?string $heading = 'Laporan Banjir';
+    protected static ?int $navigationSort = 2;
+
     public static function form(Form $form): Form
     {
         return $form

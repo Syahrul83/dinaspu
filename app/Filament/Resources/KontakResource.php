@@ -19,6 +19,14 @@ class KontakResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+
+    protected static ?string $navigationGroup = 'Setting';
+
+    protected static ?string $navigationLabel = 'Kontak';
+    protected static ?string $pluralModelLabel = 'Kontak';
+
+    protected ?string $heading = 'Kontak';
+
     public static function form(Form $form): Form
     {
         return $form

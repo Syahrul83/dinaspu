@@ -19,6 +19,15 @@ class BukuDataResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    protected static ?string $navigationGroup = 'Publikasi';
+
+    protected static ?string $navigationLabel = 'Buku Data';
+    protected static ?string $pluralModelLabel = 'Buku Data';
+
+    protected ?string $heading = 'Buku Data';
+
+    protected static ?int $navigationSort = 5;
+
     public static function form(Form $form): Form
     {
         return $form

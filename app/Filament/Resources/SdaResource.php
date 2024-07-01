@@ -19,6 +19,17 @@ class SdaResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+
+
+    protected static ?string $navigationGroup = 'Publikasi';
+
+    protected static ?string $navigationLabel = 'Informasi SDA';
+    protected static ?string $pluralModelLabel = 'Informasi SDA';
+
+    protected ?string $heading = 'Informasi SDA';
+
+    protected static ?int $navigationSort = 1;
+
     public static function form(Form $form): Form
     {
         return $form

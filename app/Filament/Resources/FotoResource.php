@@ -19,6 +19,16 @@ class FotoResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+
+    protected static ?string $navigationGroup = 'Publikasi';
+
+    protected static ?string $navigationLabel = 'Galeri Foto';
+    protected static ?string $pluralModelLabel = 'Galeri Foto';
+
+    protected ?string $heading = 'Galeri Foto';
+
+    protected static ?int $navigationSort = 7;
+
     public static function form(Form $form): Form
     {
         return $form

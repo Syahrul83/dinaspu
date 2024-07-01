@@ -19,6 +19,15 @@ class KekeringanResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+
+    protected static ?string $navigationGroup = 'Publikasi';
+
+    protected static ?string $navigationLabel = 'Laporan Kekeringan';
+    protected static ?string $pluralModelLabel = 'Laporan Kekeringan';
+
+    protected ?string $heading = 'Laporan Kekeringan';
+    protected static ?int $navigationSort = 3;
+
     public static function form(Form $form): Form
     {
         return $form
