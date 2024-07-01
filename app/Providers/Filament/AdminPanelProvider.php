@@ -51,6 +51,12 @@ class AdminPanelProvider extends PanelProvider
                 DisableBladeIconComponents::class,
                 DispatchServingFilamentEvent::class,
             ])
+            ->navigationGroups([
+                'Halaman Depan',
+                'Berita & Informasi',
+                'Menu & Halaman',
+                'Settings',
+            ])
             ->authMiddleware([
                 Authenticate::class,
             ]);

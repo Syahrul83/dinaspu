@@ -2,16 +2,19 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\HalamanResource\Pages;
-use App\Filament\Resources\HalamanResource\RelationManagers;
-use App\Models\Halaman;
 use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
+use App\Models\Halaman;
+use Filament\Forms\Form;
 use Filament\Tables\Table;
+use Filament\Resources\Resource;
+use Filament\Tables\Columns\ImageColumn;
 use Illuminate\Database\Eloquent\Builder;
+use Filament\Forms\Components\ToggleButtons;
+use AmidEsfahani\FilamentTinyEditor\TinyEditor;
+use App\Filament\Resources\HalamanResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\HalamanResource\RelationManagers;
 
 class HalamanResource extends Resource
 {
@@ -19,37 +22,79 @@ class HalamanResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+
+
+    protected static ?string $navigationGroup = 'Menu & Halaman';
+
+    protected static ?string $navigationLabel = 'Halaman';
+    protected static ?string $pluralModelLabel = 'Halaman';
+
+    protected ?string $heading = 'Halaman';
+
+    protected static ?int $navigationSort = 1;
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('title'),
-                Forms\Components\TextInput::make('slug'),
-                Forms\Components\TextInput::make('body'),
-                Forms\Components\FileUpload::make('image')
-                    ->image(),
-                Forms\Components\TextInput::make('user_id')
-                    ->required(),
-                Forms\Components\TextInput::make('status')
-                    ->required(),
-            ]);
+                Forms\Components\Group::make()
+                    ->schema([
+                        Forms\Components\Section::make()
+                            ->schema([
+                                Forms\Components\TextInput::make('title')
+                                    ->required(),
+                                TinyEditor::make('body')
+                                    ->fileAttachmentsDisk('public')
+                                    ->fileAttachmentsVisibility('public')
+                                    ->fileAttachmentsDirectory('uploads')
+                                    ->profile('custom')
+                                    ->ltr()
+                                    ->columnSpan('full')
+                                ,
+                            ]),
+                    ])
+                    ->columnSpan(['lg' => 2]),
+                Forms\Components\Group::make()
+                    ->schema([
+                        Forms\Components\Section::make()
+                            ->schema([
+                                Forms\Components\FileUpload::make('image')
+                                    ->image()
+                                    ->directory('halaman')
+                                    ->maxSize(2024),
+                                Forms\Components\Hidden::make('user_id')
+                                    ->default(auth()->user()->id),
+                                Forms\Components\toggleButtons::make('active')
+                                    ->options([
+                                        '1' => 'Published',
+                                        '0' => 'Draft',
+
+
+                                    ])->default('1')
+                                ,
+                            ]),
+                    ])
+                    ->columnSpan(['lg' => 1]),
+
+
+            ])->columns(3);
+
     }
 
     public static function table(Table $table): Table
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('No')->rowIndex(),
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('slug')
+
+
+                ImageColumn::make('image')
+                    ->height(50),
+                Tables\Columns\TextColumn::make('user.name')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('body')
-                    ->searchable(),
-                Tables\Columns\ImageColumn::make('image'),
-                Tables\Columns\TextColumn::make('user_id')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('status')
-                    ->searchable(),
+                Tables\Columns\ToggleColumn::make('active'),
+
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -67,7 +112,7 @@ class HalamanResource extends Resource
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                    // Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
     }

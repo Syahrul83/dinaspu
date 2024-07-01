@@ -2,7 +2,10 @@
 
 namespace App\Providers;
 
+use App\Models\Post;
+use App\Observers\PostObserver;
 use Illuminate\Support\ServiceProvider;
+use Filament\Support\View\Components\Modal;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -19,6 +22,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        Modal::closedByClickingAway(false);
+        Post::observe(PostObserver::class);
     }
 }

@@ -17,7 +17,7 @@ return new class extends Migration {
             $table->string('body')->nullable();
             $table->string('image')->nullable();
             $table->string('user_id');
-            $table->enum('status', ['publish', 'draft'])->default('publish');
+            $table->boolean('active')->default(true);
             $table->timestamps();
         });
     }
