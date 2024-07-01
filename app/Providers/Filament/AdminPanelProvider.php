@@ -55,6 +55,7 @@ class AdminPanelProvider extends PanelProvider
                 'Halaman Depan',
                 'Berita & Informasi',
                 'Menu & Halaman',
+                'Publikasi',
                 'Settings',
             ])
             ->authMiddleware([
