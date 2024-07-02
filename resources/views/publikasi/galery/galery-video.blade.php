@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="./assets/mdb.min.css" />
 
 <h3 class="text-center mt-4 mt-2 mb-2">Galery Video</h3>
-
+<hr>
 <div class="container d-flex justify-content-center mt-5">
     <!-- Modal gallery -->
 <section class="">
