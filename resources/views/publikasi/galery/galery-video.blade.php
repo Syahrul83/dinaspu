@@ -24,6 +24,7 @@
         </a>
       </div>
       <h4 class="text-center mt-2 mb-2">Judul Video</h4>
+      <p class="text-center">Keterangan Video</p>
     </div>
 
     <div class="col-lg-4 mb-4 mb-lg-0">
@@ -40,6 +41,7 @@
         </a>
       </div>
       <h4 class="text-center mt-2 mb-2">Judul Video</h4>
+      <p class="text-center">Keterangan Video</p>
     </div>
 
     <div class="col-lg-4 mb-4 mb-lg-0">
@@ -56,6 +58,7 @@
         </a>
       </div>
       <h4 class="text-center">Judul Video</h4>
+      <p class="text-center">Keterangan Video</p>
     </div>
     <div class="col-lg-4 mb-4 mb-lg-0">
         <div
@@ -71,6 +74,7 @@
           </a>
         </div>
         <h4 class="text-center mt-2 mb-2">Judul Video</h4>
+        <p class="text-center">Keterangan Video</p>
       </div>
 
   </div>

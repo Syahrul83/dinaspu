@@ -20,6 +20,8 @@
                     <div class="img-container">
                         <img src="assets/gf/images/1.jpg" alt="Image" class="img-top bg-dark bg-gradient img-thumb">
                     </div>
+                    <h6 class="text-center mt-1">Judul Foto</h6>
+                    <p class="text-center">Keterangan Foto</p>
                 </div>
             </div>
             <div class="col img-item">
@@ -27,6 +29,8 @@
                     <div class="img-container">
                         <img src="assets/gf/images/2.jpg" alt="Image" class="img-top bg-dark bg-gradient img-thumb">
                     </div>
+                    <h6 class="text-center mt-1">Judul Foto</h6>
+                    <p class="text-center">Keterangan Foto</p>
                 </div>
             </div>
             <div class="col img-item">
@@ -34,6 +38,8 @@
                     <div class="img-container">
                         <img src="assets/gf/images/3.jpg" alt="Image" class="img-top bg-dark bg-gradient img-thumb">
                     </div>
+                    <h6 class="text-center mt-1">Judul Foto</h6>
+                    <p class="text-center">Keterangan Foto</p>
                 </div>
             </div>
             <div class="col img-item">
@@ -41,6 +47,8 @@
                     <div class="img-container">
                         <img src="assets/gf/images/4.jpg" alt="Image" class="img-top bg-dark bg-gradient img-thumb">
                     </div>
+                    <h6 class="text-center mt-1">Judul Foto</h6>
+                    <p class="text-center">Keterangan Foto</p>
                 </div>
             </div>
             <div class="col img-item">
@@ -48,6 +56,35 @@
                     <div class="img-container">
                         <img src="assets/gf/images/5.jpg" alt="Image" class="img-top bg-dark bg-gradient img-thumb">
                     </div>
+                    <h6 class="text-center mt-1">Judul Foto</h6>
+                    <p class="text-center">Keterangan Foto</p>
+                </div>
+            </div>
+            <div class="col img-item">
+                <div class="card rounded-0">
+                    <div class="img-container">
+                        <img src="assets/gf/images/1.jpg" alt="Image" class="img-top bg-dark bg-gradient img-thumb">
+                    </div>
+                    <h6 class="text-center mt-1">Judul Foto</h6>
+                    <p class="text-center">Keterangan Foto</p>
+                </div>
+            </div>
+            <div class="col img-item">
+                <div class="card rounded-0">
+                    <div class="img-container">
+                        <img src="assets/gf/images/3.jpg" alt="Image" class="img-top bg-dark bg-gradient img-thumb">
+                    </div>
+                    <h6 class="text-center mt-1">Judul Foto</h6>
+                    <p class="text-center">Keterangan Foto</p>
+                </div>
+            </div>
+            <div class="col img-item">
+                <div class="card rounded-0">
+                    <div class="img-container">
+                        <img src="assets/gf/images/2.jpg" alt="Image" class="img-top bg-dark bg-gradient img-thumb">
+                    </div>
+                    <h6 class="text-center mt-1">Judul Foto</h6>
+                    <p class="text-center">Keterangan Foto</p>
                 </div>
             </div>
         </div>
@@ -56,7 +93,7 @@
 
 <!-- Confirmation Modal -->
 <div class="modal fade" id="imageViewerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="imageViewerModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered rounded-0">
+    <div class="modal-dialog modal-xl modal-dialog-centered rounded-0">
         <div class="modal-content rounded-0">
             <div class="modal-header py-1">
                 <h5 class="modal-title" id="imageViewerModalLabel">Viewer</h5>
@@ -73,6 +110,10 @@
                     </div>
                 </div>
             </div>
+            <div class="text-center">
+                <h6>Judul Foto</h6>
+                <p>Keterangan Foto</p>
+              </div>
         </div>
     </div>
 </div>
