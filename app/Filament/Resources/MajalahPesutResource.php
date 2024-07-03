@@ -34,8 +34,11 @@ class MajalahPesutResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('title'),
-                Forms\Components\TextInput::make('keterangan'),
-                Forms\Components\TextInput::make('file'),
+
+                Forms\Components\FileUpload::make('file')
+                    ->uploadingMessage('Uploading attachment...')
+                    ->acceptedFileTypes(['application/pdf'])
+                    ->directory('majalah_pesut'),
             ]);
     }
 
@@ -43,12 +46,9 @@ class MajalahPesutResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('title')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('keterangan')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('file')
-                    ->searchable(),
+                Tables\Columns\TextColumn::make('No')->rowIndex(),
+                Tables\Columns\TextColumn::make('title')->searchable(),
+                Tables\Columns\TextColumn::make('file'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -63,6 +63,8 @@ class MajalahPesutResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make()
+                    ->requiresConfirmation()
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -82,8 +84,8 @@ class MajalahPesutResource extends Resource
     {
         return [
             'index' => Pages\ListMajalahPesuts::route('/'),
-            'create' => Pages\CreateMajalahPesut::route('/create'),
-            'edit' => Pages\EditMajalahPesut::route('/{record}/edit'),
+            // 'create' => Pages\CreateMajalahPesut::route('/create'),
+            // 'edit' => Pages\EditMajalahPesut::route('/{record}/edit'),
         ];
     }
 }

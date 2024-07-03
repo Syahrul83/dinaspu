@@ -32,8 +32,7 @@ class VideoResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('title')->required(),
-                Forms\Components\Textarea::make('link')
-                    ->columnSpanFull(),
+                Forms\Components\TextInput::make('link')->required(),
             ]);
     }
 
@@ -42,6 +41,8 @@ class VideoResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('link')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()

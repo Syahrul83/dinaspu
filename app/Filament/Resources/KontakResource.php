@@ -2,16 +2,17 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\KontakResource\Pages;
-use App\Filament\Resources\KontakResource\RelationManagers;
-use App\Models\Kontak;
 use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
+use App\Models\Kontak;
+use Filament\Forms\Form;
 use Filament\Tables\Table;
+use Filament\Resources\Resource;
+use Filament\Forms\Components\Fieldset;
 use Illuminate\Database\Eloquent\Builder;
+use App\Filament\Resources\KontakResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\KontakResource\RelationManagers;
 
 class KontakResource extends Resource
 {
@@ -33,21 +34,30 @@ class KontakResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('title')
                     ->required(),
-                Forms\Components\TextInput::make('alamat')
-                    ->required(),
+
                 Forms\Components\TextInput::make('email')
                     ->email()
-                    ->required(),
+                ,
                 Forms\Components\TextInput::make('no_hp')
-                    ->required(),
+                ,
                 Forms\Components\TextInput::make('sda_tv')
-                    ->required(),
+                ,
                 Forms\Components\TextInput::make('twitter')
-                    ->required(),
+                ,
                 Forms\Components\TextInput::make('youtube')
-                    ->required(),
+                ,
                 Forms\Components\TextInput::make('instagram')
-                    ->required(),
+                ,
+                Fieldset::make('Kontak')
+                    ->schema([
+
+                        Forms\Components\Textarea::make('alamat')
+                            ->rows(10)
+                            ->cols(20)
+                        ,
+                        Forms\Components\Textarea::make('gmap')->rows(10)
+                            ->cols(20),
+                    ])
             ]);
     }
 
@@ -56,30 +66,15 @@ class KontakResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('alamat')
-                    ->searchable(),
+                ,
+
                 Tables\Columns\TextColumn::make('email')
-                    ->searchable(),
+                ,
                 Tables\Columns\TextColumn::make('no_hp')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('sda_tv')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('twitter')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('youtube')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('instagram')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-            ])
+                ,
+
+
+            ])->paginated(false)
             ->filters([
                 //
             ])
@@ -88,7 +83,7 @@ class KontakResource extends Resource
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                    // Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
     }
@@ -104,8 +99,8 @@ class KontakResource extends Resource
     {
         return [
             'index' => Pages\ListKontaks::route('/'),
-            'create' => Pages\CreateKontak::route('/create'),
-            'edit' => Pages\EditKontak::route('/{record}/edit'),
+            // 'create' => Pages\CreateKontak::route('/create'),
+            // 'edit' => Pages\EditKontak::route('/{record}/edit'),
         ];
     }
 }

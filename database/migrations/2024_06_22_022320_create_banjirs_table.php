@@ -13,7 +13,6 @@ return new class extends Migration {
         Schema::create('banjirs', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
-            $table->string('keterangan')->nullable();
             $table->string('file')->nullable();
             $table->timestamps();
         });

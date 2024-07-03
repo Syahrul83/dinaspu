@@ -33,8 +33,11 @@ class KekeringanResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('title'),
-                Forms\Components\TextInput::make('keterangan'),
-                Forms\Components\TextInput::make('file'),
+
+                Forms\Components\FileUpload::make('file')
+                    ->uploadingMessage('Uploading attachment...')
+                    ->acceptedFileTypes(['application/pdf'])
+                    ->directory('kekeringan'),
             ]);
     }
 
@@ -42,12 +45,9 @@ class KekeringanResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('title')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('keterangan')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('file')
-                    ->searchable(),
+                Tables\Columns\TextColumn::make('No')->rowIndex(),
+                Tables\Columns\TextColumn::make('title')->searchable(),
+                Tables\Columns\TextColumn::make('file'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -62,6 +62,8 @@ class KekeringanResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make()
+                    ->requiresConfirmation()
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -81,8 +83,8 @@ class KekeringanResource extends Resource
     {
         return [
             'index' => Pages\ListKekeringans::route('/'),
-            'create' => Pages\CreateKekeringan::route('/create'),
-            'edit' => Pages\EditKekeringan::route('/{record}/edit'),
+            // 'create' => Pages\CreateKekeringan::route('/create'),
+            // 'edit' => Pages\EditKekeringan::route('/{record}/edit'),
         ];
     }
 }
