@@ -26,7 +26,10 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
+            ->brandName('BWS Kalimantan')
+            ->favicon(asset('favicon_io/favicon.ico'))
             ->login()
+            ->profile()
             ->colors([
                 'primary' => Color::Amber,
             ])

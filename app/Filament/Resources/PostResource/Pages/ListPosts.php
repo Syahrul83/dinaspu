@@ -51,8 +51,12 @@ class ListPosts extends ListRecords
     {
 
 
+        if (auth()->user()->getRoleNames()->first() == 'super_admin' || auth()->user()->getRoleNames()->first() == 'admin') {
+            return Post::query();
+        } else {
+            return Post::query()->where('user_id', auth()->user()->id);
+        }
 
-        return Post::query()->where('user_id', auth()->user()->id);
 
 
     }
