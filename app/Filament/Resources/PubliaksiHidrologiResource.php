@@ -18,7 +18,7 @@ class PubliaksiHidrologiResource extends Resource
 {
     protected static ?string $model = PublikasiHidrologi::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-sparkles';
 
 
     protected static ?string $navigationGroup = 'Publikasi';

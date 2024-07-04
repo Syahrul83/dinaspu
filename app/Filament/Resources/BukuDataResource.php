@@ -17,7 +17,7 @@ class BukuDataResource extends Resource
 {
     protected static ?string $model = BukuData::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-book-open';
 
     protected static ?string $navigationGroup = 'Publikasi';
 

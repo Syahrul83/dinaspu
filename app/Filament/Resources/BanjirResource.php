@@ -17,7 +17,7 @@ class BanjirResource extends Resource
 {
     protected static ?string $model = Banjir::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-flag';
 
     protected static ?string $navigationGroup = 'Publikasi';
 
