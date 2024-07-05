@@ -3,6 +3,7 @@
 namespace App\Filament\Widgets;
 
 use App\Models\Post;
+use Illuminate\Support\Facades\DB;
 use Filament\Widgets\DoughnutChartWidget;
 
 class KategoriChart extends DoughnutChartWidget
@@ -13,9 +14,16 @@ class KategoriChart extends DoughnutChartWidget
     protected function getData(): array
     {
 
-        $counts = Post::join('kategoris', 'kategoris.id', '=', 'posts.kategori_id')
-            ->groupBy('posts.kategori_id')
-            ->selectRaw('count(posts.id) as count, kategoris.title as label')
+        // $counts = Post::join('kategoris', 'kategoris.id', '=', 'posts.kategori_id')
+        //     ->groupBy('posts.kategori_id')
+        //     ->selectRaw('count(posts.id) as count, kategoris.title as label')
+        //     ->get();
+
+
+        $counts = DB::table('posts')
+            ->select(DB::raw('count(posts.id) as count, kategoris.title as label'))
+            ->join('kategoris', 'kategoris.id', '=', 'posts.kategori_id')
+            ->groupBy('posts.kategori_id', 'kategoris.title')
             ->get();
 
         // Function to generate a random RGB color
