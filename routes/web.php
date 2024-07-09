@@ -12,7 +12,12 @@ use App\Http\Controllers\HomeController;
 // })->name('home');
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/semua-berita', [HomeController::class, 'semuaBerita'])->name('semuaBerita');
+Route::get('/selengkapya/{id}', [HomeController::class, 'selengkapBerita'])->name('selengkapBerita');
 
+// Route::get('/tes', function () {
+//     return view('home.content.selengkapPost');
+// })->name('tes');
 
 //route Profil
 Route::get('/visi-misi', function () {

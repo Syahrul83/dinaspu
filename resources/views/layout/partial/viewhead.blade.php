@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0021)https://sda.pu.go.id/ -->
+
 <html class="webkit chrome win js sticky-header-enabled">
 
 <head>
@@ -16,26 +16,26 @@
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no" />
     <!-- Web Fonts -->
-    <link id="googleFonts" href="./assets/css" rel="stylesheet" type="text/css" />
+    <link id="googleFonts" href="/assets/css" rel="stylesheet" type="text/css" />
     <!-- Vendor CSS -->
-    <link rel="stylesheet" href="./assets/bootstrap.min.css" />
-    <link rel="stylesheet" href="./assets/all.min.css" />
-    <link rel="stylesheet" href="./assets/animate.compat.css" />
-    <link rel="stylesheet" href="./assets/simple-line-icons.min.css" />
-    <link rel="stylesheet" href="./assets/owl.carousel.min.css" />
-    <link rel="stylesheet" href="./assets/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="./assets/magnific-popup.min.css" />
+    <link rel="stylesheet" href="/assets/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/all.min.css" />
+    <link rel="stylesheet" href="/assets/animate.compat.css" />
+    <link rel="stylesheet" href="/assets/simple-line-icons.min.css" />
+    <link rel="stylesheet" href="/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="/assets/magnific-popup.min.css" />
     <!-- Theme CSS -->
-    <link rel="stylesheet" href="./assets/theme.css" />
-    <link rel="stylesheet" href="./assets/theme-elements.css" />
-    <link rel="stylesheet" href="./assets/theme-blog.css" />
+    <link rel="stylesheet" href="/assets/theme.css" />
+    <link rel="stylesheet" href="/assets/theme-elements.css" />
+    <link rel="stylesheet" href="/assets/theme-blog.css" />
     <!-- Skin CSS -->
-    <link id="skinCSS" rel="stylesheet" href="./assets/skin-corporate-5.css" />
-    <!-- <link id="skinCSS" rel="stylesheet" href="https://sda.pu.go.id/assets/templates/css/skins/skin-hut-ri.css"> -->
+    <link id="skinCSS" rel="stylesheet" href="/assets/skin-corporate-5.css" />
+
     <!-- Theme Custom CSS -->
-    <link rel="stylesheet" href="./assets/custom.css" />
+    <link rel="stylesheet" href="/assets/custom.css" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async="" src="./assets/js"></script>
+    <!-- <script async="" src="/assets/js"></script> -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() {
@@ -44,4 +44,4 @@
         gtag("js", new Date());
         gtag("config", "G-HZX91843N9");
     </script>
-    </head>
+</head>
