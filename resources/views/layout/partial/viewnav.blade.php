@@ -9,17 +9,19 @@
                         <div class="header-row">
                             <nav class="header-nav-top">
                                 <ul class="nav nav-pills">
-                                    <li class="nav-item nav-item-borders py-2 d-none d-sm-inline-flex "> <a
-                                            href="https://pu.go.id/" class="text-white"><img src="./assets/logo-pu.png"
-                                                alt="Indonesia" width="25"> PUPR</a> </li>
+
+
+                                    <li class="nav-item nav-item-borders py-2 d-none d-sm-inline-flex "> <a href="/"
+                                            class="text-white"><img src="/assets/logo-pu.png" alt="Indonesia"
+                                                width="25"> PUPR</a> </li>
                                     <li class="nav-item nav-item-borders py-2"> <a href="{{ route('home') }}"
                                             class="text-white"><i class="fa fa-home text-4" aria-hidden="true"
                                                 style="top: 0;"></i>
-                                            (0541)-2088390</a> </li>
+                                            {{ $kontak->no_hp }}</a> </li>
                                     <li class="nav-item nav-item-borders py-2 d-none d-md-inline-flex"> <a
                                             href="mailto:infosda@pu.go.id" class="text-white text-3"><i
                                                 class="fas fa-envelope text-4 text-white" style="top: 0;"></i>
-                                            bws.kalimantan.iv.samarinda@pu.go.id</a> </li>
+                                            {{ $kontak->email }}</a> </li>
                                 </ul>
                             </nav>
                         </div>
@@ -29,8 +31,9 @@
                             <nav class="header-nav-top">
                                 <ul class="nav nav-pills">
                                     <li class="nav-item nav-item-borders py-2 d-none d-lg-inline-flex"> <a
-                                            href="{{ route('home') }}" class="text-white"> Selasa, 04 Juni
-                                            2024 </a> </li>
+                                            href="{{ route('home') }}" class="text-white">
+                                            {{ now()->locale('id')->translatedformat('l, j F Y') }}
+                                        </a> </li>
                                 </ul>
                             </nav>
                         </div>
@@ -45,7 +48,7 @@
                         <div class="header-logo" style="width: 500px; height: 50px">
                             <a href="{{ route('home') }}">
                                 <img alt="Ditjen SDA" width="500" height="50" data-sticky-width="400"
-                                    data-sticky-height="40" src="./assets/sda_logo.png" />
+                                    data-sticky-height="40" src="/assets/sda_logo.png" />
                             </a>
                         </div>
                     </div>
@@ -58,50 +61,50 @@
                                 <nav class="collapse">
                                     <ul class="nav nav-pills" id="mainNav">
                                         <li class="dropdown dropdown-reverse">
-                                            <a href="{{ route('home') }}" class="dropdown-item"><i class="fas fa-home"></i></a>
+                                            <a href="{{ route('home') }}" class="dropdown-item"><i
+                                                    class="fas fa-home"></i></a>
                                         </li>
                                         <li class="dropdown"><a href="#" class="dropdown-item dropdown-toggle">PROFIL<i
                                                     class="fas fa-chevron-down"></i></a>
                                             <ul class="dropdown-menu">
-                                                <li><a href="{{ route('visi-misi') }}" class="dropdown-item">Visi dan Misi</a>
+                                                <li><a href="{{ route('visi-misi') }}" class="dropdown-item">Visi dan
+                                                        Misi</a>
                                                 </li>
                                                 <li><a href="{{ route('tusi') }}" class="dropdown-item">Tugas dan
                                                         Fungsi</a></li>
                                                 <li><a href="{{ route('struktur') }}" class="dropdown-item">Struktur
                                                         Organisasi</a></li>
-                                                <li><a href="{{ route('sejarah') }}"
-                                                        class="dropdown-item">Sejarah</a></li>
-                                                <li><a href="{{ route('lokasi-kantor') }}"
-                                                        class="dropdown-item">Lokasi Kantor</a></li>
+                                                <li><a href="{{ route('sejarah') }}" class="dropdown-item">Sejarah</a>
+                                                </li>
+                                                <li><a href="{{ route('lokasi-kantor') }}" class="dropdown-item">Lokasi
+                                                        Kantor</a></li>
                                             </ul>
                                         </li>
                                         <li class="dropdown"><a href="#"
                                                 class="dropdown-item dropdown-toggle">KELEMBAGAAN<i
                                                     class="fas fa-chevron-down"></i></a>
                                             <ul class="dropdown-menu">
-                                                <li><a href="{{ route('tkpsda') }}"
-                                                        class="dropdown-item">TKSPDA</a></li>
-                                                <li><a href="{{ route('kmps') }}"
-                                                        class="dropdown-item">KOMUNITAS PEDULI SUNGAI</a></li>
-                                                <li><a href="{{ route('komir') }}"
-                                                        class="dropdown-item">KOMISI IRIGASI</a></li>
-                                                <li><a href="{{ route('p3a') }}"
-                                                        class="dropdown-item">P3A</a></li>
-                                                <li><a href="{{ route('gnkpa') }}"
-                                                        class="dropdown-item">GNKPA</a></li>
+                                                <li><a href="{{ route('tkpsda') }}" class="dropdown-item">TKSPDA</a>
+                                                </li>
+                                                <li><a href="{{ route('kmps') }}" class="dropdown-item">KOMUNITAS PEDULI
+                                                        SUNGAI</a></li>
+                                                <li><a href="{{ route('komir') }}" class="dropdown-item">KOMISI
+                                                        IRIGASI</a></li>
+                                                <li><a href="{{ route('p3a') }}" class="dropdown-item">P3A</a></li>
+                                                <li><a href="{{ route('gnkpa') }}" class="dropdown-item">GNKPA</a></li>
                                             </ul>
                                         </li>
                                         <li class="dropdown"><a href="#" class="dropdown-item dropdown-toggle">LAYANAN
                                                 dan Aplikasi<i class="fas fa-chevron-down"></i></a>
                                             <ul class="dropdown-menu">
-                                                <li><a href="{{ route('rekomtek') }}"
-                                                        class="dropdown-item">Rekomtek SDA</a></li>
+                                                <li><a href="{{ route('rekomtek') }}" class="dropdown-item">Rekomtek
+                                                        SDA</a></li>
 
                                                 <li class="dropdown-submenu"><a href="#" class="dropdown-item">SISDA <i
                                                             class="fas fa-chevron-down"></i></a>
                                                     <ul class="dropdown-menu">
-                                                        <li><a href="{{ route('hidrologi') }}"
-                                                                class="dropdown-item"> Informasi Hidrologi</a></li>
+                                                        <li><a href="{{ route('hidrologi') }}" class="dropdown-item">
+                                                                Informasi Hidrologi</a></li>
                                                         <li><a href="{{ route('irwa') }}"
                                                                 class="dropdown-item">Informasi Irigasi dan Rawa</a>
                                                         </li>
@@ -120,8 +123,8 @@
                                                                 class="dropdown-item">Informasi Alokasi Air</a></li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="{{ route('webgis') }}"
-                                                        class="dropdown-item">WebGIS BWS KIV-SMD</a></li>
+                                                <li><a href="{{ route('webgis') }}" class="dropdown-item">WebGIS BWS
+                                                        KIV-SMD</a></li>
                                                 <li><a href="{{ route('sih3') }}" class="dropdown-item">SIH3 WS
                                                         Mahakam</a></li>
                                                 <li><a href="{{ route('laporan-bencana') }}"
@@ -138,8 +141,8 @@
                                                         <li><a href="{{ route('pola') }}" class="dropdown-item">Pola
                                                                 Wilayah Sungai</a>
                                                         </li>
-                                                        <li><a href="{{ route('rpsda') }}"
-                                                                class="dropdown-item">Rencana PSDA Wilayah
+                                                        <li><a href="{{ route('rpsda') }}" class="dropdown-item">Rencana
+                                                                PSDA Wilayah
                                                                 Sungai</a></li>
                                                         <li><a href="{{ route('sebaran-perijinan') }}"
                                                                 class="dropdown-item">Sebaran Perijinan SDA</a></li>
@@ -166,8 +169,7 @@
                                                                 class="dropdown-item">Publikasi Hidrologi</a></li>
                                                     </ul>
                                                 </li>
-                                                <li class="dropdown-submenu"><a href="#"
-                                                        class="dropdown-item">Galeri <i
+                                                <li class="dropdown-submenu"><a href="#" class="dropdown-item">Galeri <i
                                                             class="fas fa-chevron-down"></i></a>
                                                     <ul class="dropdown-menu">
                                                         <li><a href="{{ route('galery-foto') }}"
@@ -176,9 +178,8 @@
                                                                 class="dropdown-item">Galeri Video</a></li>
                                                     </ul>
                                                 </li>
-                                                <li class="dropdown-submenu"><a href="#"
-                                                        class="dropdown-item">Hasil Survey Kepuasan<i
-                                                            class="fas fa-chevron-down"></i></a>
+                                                <li class="dropdown-submenu"><a href="#" class="dropdown-item">Hasil
+                                                        Survey Kepuasan<i class="fas fa-chevron-down"></i></a>
                                                     <ul class="dropdown-menu">
                                                         <li><a href="{{ route('kinerja-balai') }}"
                                                                 class="dropdown-item">Kinerja Balai</a></li>
@@ -205,8 +206,8 @@
                                                 class="dropdown-item dropdown-toggle">Pengaduan<i
                                                     class="fas fa-chevron-down"></i></a>
                                             <ul class="dropdown-menu">
-                                                <li><a href="{{ route('lapor') }}"
-                                                        class="dropdown-item">L.A.P.O.R.!</a></li>
+                                                <li><a href="{{ route('lapor') }}" class="dropdown-item">L.A.P.O.R.!</a>
+                                                </li>
                                                 <li><a href="{{ route('gratifikasi') }}"
                                                         class="dropdown-item">e-GRATIFIKASI</a></li>
                                                 <li><a href="{{ route('wbs') }}" class="dropdown-item">Wistle
@@ -226,9 +227,9 @@
                         <div
                             class="header-nav-features header-nav-features-no-border header-nav-features-lg-show-border order-1 order-lg-2">
                             <div class="header-nav-feature header-nav-features-search d-inline-flex">
-                                <li class="nav-item nav-item-borders py-2 d-none d-sm-inline-flex "> <a
-                                        href="https://pu.go.id/" class="text-white"><img src="./assets/zi.png"
-                                            alt="Indonesia" width="120"> PUPR</a> </li>
+                                <li class="nav-item nav-item-borders py-2 d-none d-sm-inline-flex "> <a href="/"
+                                        class="text-white"><img src="/assets/zi.png" alt="Indonesia" width="120">
+                                        PUPR</a> </li>
                             </div>
                         </div>
                     </div>

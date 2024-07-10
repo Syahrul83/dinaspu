@@ -19,13 +19,27 @@ class SdaResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+
+
+    protected static ?string $navigationGroup = 'Publikasi';
+
+    protected static ?string $navigationLabel = 'Informasi SDA';
+    protected static ?string $pluralModelLabel = 'Informasi SDA';
+
+    protected ?string $heading = 'Informasi SDA';
+
+    protected static ?int $navigationSort = 1;
+
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Forms\Components\TextInput::make('title'),
-                Forms\Components\TextInput::make('keterangan'),
-                Forms\Components\TextInput::make('file'),
+
+                Forms\Components\FileUpload::make('file')
+                    ->uploadingMessage('Uploading attachment...')
+                    ->acceptedFileTypes(['application/pdf'])
+                    ->directory('sda_file'),
             ]);
     }
 
@@ -33,21 +47,11 @@ class SdaResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('title')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('keterangan')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('file')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-            ])
+                Tables\Columns\TextColumn::make('title'),
+                Tables\Columns\TextColumn::make('file'),
+
+
+            ])->paginated(false)
             ->filters([
                 //
             ])
@@ -56,7 +60,7 @@ class SdaResource extends Resource
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                    // Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
     }
@@ -72,8 +76,8 @@ class SdaResource extends Resource
     {
         return [
             'index' => Pages\ListSdas::route('/'),
-            'create' => Pages\CreateSda::route('/create'),
-            'edit' => Pages\EditSda::route('/{record}/edit'),
+            // 'create' => Pages\CreateSda::route('/create'),
+            // 'edit' => Pages\EditSda::route('/{record}/edit'),
         ];
     }
 }

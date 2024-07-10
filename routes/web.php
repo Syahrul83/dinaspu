@@ -1,11 +1,23 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+
+
+
 
 //Route Home
-Route::get('/', function () {
-    return view('home.index');
-})->name('home');
+// Route::get('/', function () {
+//     return view('home.index');
+// })->name('home');
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/semua-berita', [HomeController::class, 'semuaBerita'])->name('semuaBerita');
+Route::get('/selengkapya/{id}', [HomeController::class, 'selengkapBerita'])->name('selengkapBerita');
+
+// Route::get('/tes', function () {
+//     return view('home.content.selengkapPost');
+// })->name('tes');
 
 //route Profil
 Route::get('/visi-misi', function () {

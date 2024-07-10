@@ -17,14 +17,29 @@ class FotoResource extends Resource
 {
     protected static ?string $model = Foto::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-photo';
+
+
+    protected static ?string $navigationGroup = 'Publikasi';
+
+    protected static ?string $navigationLabel = 'Galeri Foto';
+    protected static ?string $pluralModelLabel = 'Galeri Foto';
+
+    protected ?string $heading = 'Galeri Foto';
+
+    protected static ?int $navigationSort = 7;
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Forms\Components\TextInput::make('title'),
-                Forms\Components\Textarea::make('image')
+                Forms\Components\FileUpload::make('image')
+                    ->image()
+                    ->directory('foto')
+                    ->imageResizeMode('cover')
+                    ->imageResizeTargetWidth('800')
+                    ->maxSize(2024)
                     ->columnSpanFull(),
             ]);
     }
@@ -35,6 +50,8 @@ class FotoResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
+                Tables\Columns\ImageColumn::make('image')
+                    ->width(200),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -49,6 +66,8 @@ class FotoResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make()
+                    ->requiresConfirmation()
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -68,8 +87,8 @@ class FotoResource extends Resource
     {
         return [
             'index' => Pages\ListFotos::route('/'),
-            'create' => Pages\CreateFoto::route('/create'),
-            'edit' => Pages\EditFoto::route('/{record}/edit'),
+            // 'create' => Pages\CreateFoto::route('/create'),
+            // 'edit' => Pages\EditFoto::route('/{record}/edit'),
         ];
     }
 }

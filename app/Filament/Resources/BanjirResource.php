@@ -17,13 +17,26 @@ class BanjirResource extends Resource
 {
     protected static ?string $model = Banjir::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-flag';
+
+    protected static ?string $navigationGroup = 'Publikasi';
+
+    protected static ?string $navigationLabel = 'Laporan Banjir';
+    protected static ?string $pluralModelLabel = 'Laporan Banjir';
+
+    protected ?string $heading = 'Laporan Banjir';
+    protected static ?int $navigationSort = 2;
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                //
+                Forms\Components\TextInput::make('title'),
+
+                Forms\Components\FileUpload::make('file')
+                    ->uploadingMessage('Uploading attachment...')
+                    ->acceptedFileTypes(['application/pdf'])
+                    ->directory('banjir'),
             ]);
     }
 
@@ -31,6 +44,9 @@ class BanjirResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('No')->rowIndex(),
+                Tables\Columns\TextColumn::make('title')->searchable(),
+                Tables\Columns\TextColumn::make('file'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -45,6 +61,8 @@ class BanjirResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make()
+                    ->requiresConfirmation()
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -64,8 +82,8 @@ class BanjirResource extends Resource
     {
         return [
             'index' => Pages\ListBanjirs::route('/'),
-            'create' => Pages\CreateBanjir::route('/create'),
-            'edit' => Pages\EditBanjir::route('/{record}/edit'),
+            // 'create' => Pages\CreateBanjir::route('/create'),
+            // 'edit' => Pages\EditBanjir::route('/{record}/edit'),
         ];
     }
 }

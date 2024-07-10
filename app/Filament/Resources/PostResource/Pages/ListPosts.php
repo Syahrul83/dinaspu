@@ -2,12 +2,13 @@
 
 namespace App\Filament\Resources\PostResource\Pages;
 
-use App\Models\Kategori;
 use App\Models\Post;
 use Filament\Actions;
+use App\Models\Kategori;
+use Filament\Resources\Components\Tab;
 use App\Filament\Resources\PostResource;
 use Filament\Resources\Pages\ListRecords;
-use Filament\Resources\Components\Tab;
+use Illuminate\Database\Eloquent\Builder;
 
 class ListPosts extends ListRecords
 {
@@ -41,6 +42,21 @@ class ListPosts extends ListRecords
         }
 
         return $tabs;
+
+
+    }
+
+
+    protected function getTableQuery(): Builder
+    {
+
+
+        if (auth()->user()->getRoleNames()->first() == 'super_admin' || auth()->user()->getRoleNames()->first() == 'admin') {
+            return Post::query();
+        } else {
+            return Post::query()->where('user_id', auth()->user()->id);
+        }
+
 
 
     }

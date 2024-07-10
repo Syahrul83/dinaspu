@@ -15,7 +15,7 @@
                                 </div>
                                 <div class="col-9 d-flex flex-column align-items-end justify-content-end">
                                     <h4 class="font-weight-light text-4 mb-1">
-                                        <a href="https://sda.pu.go.id/berita/index/sda">
+                                        <a href="/semua-berita">
                                             Lihat lainnya ...
                                         </a>
                                     </h4>
@@ -25,173 +25,73 @@
                     </div>
                     <div class="row recent-posts appear-animation" data-appear-animation="fadeInUpShorter"
                         data-appear-animation-delay="200">
-                        <div class="col-md-6 col-lg-6 col-sm-12">
-                            <article>
-                                <div class="row">
-                                    <div class="col">
-                                        <a href="https://sda.pu.go.id/berita/view/jadi_tuan_rumah_world_water_forum_ke-11_tahun_2027_arab_saudi_siap_berbagi_pengalaman_desalinasi_air_laut"
-                                            class="text-decoration-none">
-                                            <img src="./assets/b761a-20240524184655-penutupan-world-water-forum-240524-nhw-6.jpg"
-                                                class="img-landing hover-effect-2 mb-3"
-                                                alt="Jadi Tuan Rumah World Water Forum ke-11 Tahun 2027, Arab Saudi Siap Berbagi Pengalaman Desalinasi Air Laut" />
-                                        </a>
-                                    </div>
-                                    <h4 class="text-4 line-height-6">
-                                        <a href="https://sda.pu.go.id/berita/view/jadi_tuan_rumah_world_water_forum_ke-11_tahun_2027_arab_saudi_siap_berbagi_pengalaman_desalinasi_air_laut"
-                                            class="text-primary text-hover-quaternary">Jadi Tuan Rumah World
-                                            Water
-                                            Forum ke-11 Tahun 2027,
-                                            Arab Saudi Siap Berbagi Pengalaman Desalinasi Air
-                                            Laut</a>
-                                    </h4>
-                                </div>
-                                <div class="row">
-                                    <div class="col-auto pe-0">
-                                        <div class="date">
-                                            <span class="day font-weight-extra-bold border">29</span>
-                                            <span class="month text-2 text-uppercase">Mei</span>
-                                        </div>
-                                    </div>
-                                    <div class="col ps-1">
-                                        <p class="pe-4 pb-0 mb-0">
-                                            Pada tahun 2027 mendatang, Arah Saudi menjadi tuan
-                                            rumah World Water Forum ke-11
-                                        </p>
-                                        <a href="https://sda.pu.go.id/berita/view/jadi_tuan_rumah_world_water_forum_ke-11_tahun_2027_arab_saudi_siap_berbagi_pengalaman_desalinasi_air_laut"
-                                            class="read-more text-primary font-weight-semibold text-2 p-0 m-0 mb-3">selengkapnya
-                                            <i class="fas fa-chevron-right text-1 ms-1"></i></a>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-sm-12">
-                            <article>
-                                <div class="row">
-                                    <div class="col">
-                                        <a href="https://sda.pu.go.id/berita/view/field_trip_world_water_forum_ke-10_peserta_kagumi_koleksi_dan_sejarah_pengelolaan_air_di_water_museum_mandala_manthika"
-                                            class="text-decoration-none">
-                                            <img src="./assets/af723-aaw07346.jpg"
-                                                class="img-landing hover-effect-2 mb-3"
-                                                alt="Field Trip World Water Forum ke-10, Peserta Kagumi Koleksi dan Sejarah Pengelolaan Air di Water Museum Mandala Manthika" />
-                                        </a>
-                                    </div>
-                                    <h4 class="text-4 line-height-6">
-                                        <a href="https://sda.pu.go.id/berita/view/field_trip_world_water_forum_ke-10_peserta_kagumi_koleksi_dan_sejarah_pengelolaan_air_di_water_museum_mandala_manthika"
-                                            class="text-primary text-hover-quaternary">Field Trip World
-                                            Water Forum
-                                            ke-10, Peserta Kagumi
-                                            Koleksi dan Sejarah Pengelolaan Air di Water Museum
-                                            Mandala Manthika</a>
-                                    </h4>
-                                </div>
-                                <div class="row">
-                                    <div class="col-auto pe-0">
-                                        <div class="date">
-                                            <span class="day font-weight-extra-bold border">25</span>
-                                            <span class="month text-2 text-uppercase">Mei</span>
-                                        </div>
-                                    </div>
-                                    <div class="col ps-1">
-                                        <p class="pe-4 pb-0 mb-0">
-                                            Peserta field trip World Water Forum ke-10 ke Water
-                                            Museum Mandala Manthika (dulu bernama Museum Subak) di
-                                            Kabupaten Tabanan
-                                        </p>
-                                        <a href="https://sda.pu.go.id/berita/view/field_trip_world_water_forum_ke-10_peserta_kagumi_koleksi_dan_sejarah_pengelolaan_air_di_water_museum_mandala_manthika"
-                                            class="read-more text-primary font-weight-semibold text-2 p-0 m-0 mb-3">selengkapnya
-                                            <i class="fas fa-chevron-right text-1 ms-1"></i></a>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-sm-12">
-                            <article>
-                                <div class="row">
-                                    <div class="col">
-                                        <a href="https://sda.pu.go.id/berita/view/world_water_forum_ke-10_resmi_ditutup_sepakati_concrete_deliverables_and_actions_senilai_usd_9_4_miliar"
-                                            class="text-decoration-none">
-                                            <img src="./assets/2e3f1-20240524191516-penutupan-world-water-forum-240524-nhw-15.jpg"
-                                                class="img-landing hover-effect-2 mb-3"
-                                                alt="World Water Forum ke-10 Resmi Ditutup, Sepakati Concrete Deliverables and Actions Senilai USD 9,4 Miliar" />
-                                        </a>
-                                    </div>
-                                    <h4 class="text-4 line-height-6">
-                                        <a href="https://sda.pu.go.id/berita/view/world_water_forum_ke-10_resmi_ditutup_sepakati_concrete_deliverables_and_actions_senilai_usd_9_4_miliar"
-                                            class="text-primary text-hover-quaternary">World Water Forum
-                                            ke-10 Resmi
-                                            Ditutup, Sepakati
-                                            Concrete Deliverables and Actions Senilai USD 9,4
-                                            Miliar</a>
-                                    </h4>
-                                </div>
-                                <div class="row">
-                                    <div class="col-auto pe-0">
-                                        <div class="date">
-                                            <span class="day font-weight-extra-bold border">24</span>
-                                            <span class="month text-2 text-uppercase">Mei</span>
-                                        </div>
-                                    </div>
-                                    <div class="col ps-1">
-                                        <p class="pe-4 pb-0 mb-0">
-                                            Menteri Pekerjaan Umum dan Perumahan Rakyat, Basuki
-                                            Hadimuljono menutup World Water Forum ke-10
-                                        </p>
-                                        <a href="https://sda.pu.go.id/berita/view/world_water_forum_ke-10_resmi_ditutup_sepakati_concrete_deliverables_and_actions_senilai_usd_9_4_miliar"
-                                            class="read-more text-primary font-weight-semibold text-2 p-0 m-0 mb-3">selengkapnya
-                                            <i class="fas fa-chevron-right text-1 ms-1"></i></a>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-sm-12">
-                            <article>
-                                <div class="row">
-                                    <div class="col">
-                                        <a href="https://sda.pu.go.id/berita/view/world_water_forum_ke-10_resmi_ditutup_sepakati_concrete_deliverables_and_actions_senilai_usd_9_4_miliar"
-                                            class="text-decoration-none">
-                                            <img src="./assets/2e3f1-20240524191516-penutupan-world-water-forum-240524-nhw-15.jpg"
-                                                class="img-landing hover-effect-2 mb-3"
-                                                alt="World Water Forum ke-10 Resmi Ditutup, Sepakati Concrete Deliverables and Actions Senilai USD 9,4 Miliar" />
-                                        </a>
-                                    </div>
-                                    <h4 class="text-4 line-height-6">
-                                        <a href="https://sda.pu.go.id/berita/view/world_water_forum_ke-10_resmi_ditutup_sepakati_concrete_deliverables_and_actions_senilai_usd_9_4_miliar"
-                                            class="text-primary text-hover-quaternary">World Water Forum
-                                            ke-10 Resmi
-                                            Ditutup, Sepakati
-                                            Concrete Deliverables and Actions Senilai USD 9,4
-                                            Miliar</a>
-                                    </h4>
-                                </div>
-                                <div class="row">
-                                    <div class="col-auto pe-0">
-                                        <div class="date">
-                                            <span class="day font-weight-extra-bold border">24</span>
-                                            <span class="month text-2 text-uppercase">Mei</span>
-                                        </div>
-                                    </div>
-                                    <div class="col ps-1">
-                                        <p class="pe-4 pb-0 mb-0">
-                                            Menteri Pekerjaan Umum dan Perumahan Rakyat, Basuki
-                                            Hadimuljono menutup World Water Forum ke-10
-                                        </p>
-                                        <a href="https://sda.pu.go.id/berita/view/world_water_forum_ke-10_resmi_ditutup_sepakati_concrete_deliverables_and_actions_senilai_usd_9_4_miliar"
-                                            class="read-more text-primary font-weight-semibold text-2 p-0 m-0 mb-3">selengkapnya
-                                            <i class="fas fa-chevron-right text-1 ms-1"></i></a>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
+                        @foreach ($posts as $post)
+
+
+                                                <div class="col-md-6 col-lg-6 col-sm-12">
+                                                    <article>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <a href="{{ route('selengkapBerita', $post->id) }}"
+                                                                    class="text-decoration-none">
+                                                                    @if (isset($post->image))
+                                                                        <img src="{{ asset('storage/' . $post->image) }}"
+                                                                            class="img-landing hover-effect-2 mb-3" alt="{{$post->title}}" />
+                                                                    @else
+                                                                        <img src="{{ asset('assets/default.jpg') }}"
+                                                                            class="img-landing hover-effect-2 mb-3" alt="default" />
+                                                                    @endif
+
+                                                                </a>
+                                                            </div>
+                                                            <h4 class="text-4 line-height-6">
+                                                                <a href="{{ route('selengkapBerita', $post->id) }}"
+                                                                    class="text-primary text-hover-quaternary">{{$post->title}}</a>
+                                                            </h4>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-auto pe-0">
+                                                                @php
+                                                                    $date = $post->created_at->format('d');
+
+                                                                @endphp
+                                                                <div class="date">
+                                                                    <span
+                                                                        class="day font-weight-extra-bold border">{{  $post->created_at->format('d') }}</span>
+                                                                    <span
+                                                                        class="month text-2 text-uppercase">{{  $post->created_at->format('M') }}</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col ps-1">
+                                                                @php
+                                                                    $isi_berita = strip_tags($post->body) ?? null;
+                                                                    $isi = substr($isi_berita, 0, 100);
+                                                                    $isi = substr($isi_berita, 0, strrpos($isi, " "));
+                                                                @endphp
+                                                                <p class="pe-4 pb-0 mb-0">
+                                                                    {!! $isi !!}
+                                                                </p>
+                                                                <a href="{{ route('selengkapBerita', $post->id) }}"
+                                                                    class="read-more text-primary font-weight-semibold text-2 p-0 m-0 mb-3">selengkapnya
+                                                                    <i class="fas fa-chevron-right text-1 ms-1"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                </div>
+
+                        @endforeach
+
+
+
                     </div>
                 </div>
             </section>
         </div>
         <div class="col-12 col-lg-4 appear-animation animated fadeInLeftShorter appear-animation-visible"
-            data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="700"
-            style="animation-delay: 700ms;">
+            data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="700" style="animation-delay: 700ms;">
             <!-- Ibfografis -->
             @include('home.content.infografis')
-            <br> 
+            <br>
             <!-- Video -->
             @include('home.content.video')
             <br>

@@ -13,13 +13,14 @@ return new class extends Migration {
         Schema::create('kontaks', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('alamat');
-            $table->string('email');
-            $table->string('no_hp');
-            $table->string('sda_tv');
-            $table->string('twitter');
-            $table->string('youtube');
-            $table->string('instagram');
+            $table->string('alamat')->nullable();
+            $table->string('email')->nullable();
+            $table->string('no_hp')->nullable();
+            $table->string('sda_tv')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('youtube')->nullable();
+            $table->string('instagram')->nullable();
+            $table->string('gmap')->nullable();
             $table->timestamps();
         });
     }
