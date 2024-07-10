@@ -2,6 +2,7 @@
 @section('content')
 
 <h3 class="text-center mt-4">Publikasi Hidrologi</h3>
+<hr>
 <div class="nav-align-top">
     <ul class="nav nav-pills mb-3 gap-4 justify-content-center" role="tablist">
       <li class="nav-item">

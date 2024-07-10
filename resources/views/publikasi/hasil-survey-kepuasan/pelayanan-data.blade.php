@@ -3,7 +3,7 @@
 
 
 <h3 class="text-center mt-4">Laporan Survey Kepuasan Pelayanan Data</h3>
-
+<hr>
 <div class="container">
     <table class="table table-striped table-hover">
         <thead class="text-center table-primary">

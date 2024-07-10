@@ -2,7 +2,7 @@
 @section('content')
 
 <h3 class="text-center mt-4s">Majalah Pesut</h3>
-
+<hr>
 <div class="container">
     <table class="table table-striped table-hover">
         <thead class="text-center table-primary">
