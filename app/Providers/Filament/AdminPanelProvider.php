@@ -68,6 +68,9 @@ class AdminPanelProvider extends PanelProvider
                 NavigationGroup::make()
                     ->label('Publikasi')
                     ->collapsed(),
+                NavigationGroup::make()
+                    ->label('Hasil Survey Kepuasan')
+                    ->collapsed(),
                 NavigationGroup::make()->label('Setting')
                     ->collapsed(),
                 NavigationGroup::make()->label('Pelindung'),

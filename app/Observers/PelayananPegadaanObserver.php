@@ -19,7 +19,9 @@ class PelayananPegadaanObserver
      */
     public function updated(PelayananPegadaan $pelayananPegadaan): void
     {
-        //
+        if ($pelayananPegadaan->isDirty('file') && !is_null($pelayananPegadaan->getOriginal('file'))) {
+            \Illuminate\Support\Facades\Storage::disk('public')->delete($pelayananPegadaan->getOriginal('file'));
+        }
     }
 
     /**
@@ -27,7 +29,9 @@ class PelayananPegadaanObserver
      */
     public function deleted(PelayananPegadaan $pelayananPegadaan): void
     {
-        //
+        if (!is_null($pelayananPegadaan->file)) {
+            \Illuminate\Support\Facades\Storage::disk('public')->delete($pelayananPegadaan->file);
+        }
     }
 
     /**

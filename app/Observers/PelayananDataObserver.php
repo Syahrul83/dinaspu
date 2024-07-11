@@ -19,7 +19,9 @@ class PelayananDataObserver
      */
     public function updated(PelayananData $pelayananData): void
     {
-        //
+        if ($pelayananData->isDirty('file') && !is_null($pelayananData->getOriginal('file'))) {
+            \Illuminate\Support\Facades\Storage::disk('public')->delete($pelayananData->getOriginal('file'));
+        }
     }
 
     /**
@@ -27,7 +29,9 @@ class PelayananDataObserver
      */
     public function deleted(PelayananData $pelayananData): void
     {
-        //
+        if (!is_null($pelayananData->file)) {
+            \Illuminate\Support\Facades\Storage::disk('public')->delete($pelayananData->file);
+        }
     }
 
     /**

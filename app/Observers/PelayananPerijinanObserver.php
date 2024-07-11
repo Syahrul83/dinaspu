@@ -19,7 +19,9 @@ class PelayananPerijinanObserver
      */
     public function updated(PelayananPerijinan $pelayananPerijinan): void
     {
-        //
+        if ($pelayananPerijinan->isDirty('file') && !is_null($pelayananPerijinan->getOriginal('file'))) {
+            \Illuminate\Support\Facades\Storage::disk('public')->delete($pelayananPerijinan->getOriginal('file'));
+        }
     }
 
     /**
@@ -27,7 +29,9 @@ class PelayananPerijinanObserver
      */
     public function deleted(PelayananPerijinan $pelayananPerijinan): void
     {
-        //
+        if (!is_null($pelayananPerijinan->file)) {
+            \Illuminate\Support\Facades\Storage::disk('public')->delete($pelayananPerijinan->file);
+        }
     }
 
     /**

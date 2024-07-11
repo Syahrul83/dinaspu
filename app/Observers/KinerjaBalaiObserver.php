@@ -19,7 +19,9 @@ class KinerjaBalaiObserver
      */
     public function updated(KinerjaBalai $kinerjaBalai): void
     {
-        //
+        if ($kinerjaBalai->isDirty('file') && !is_null($kinerjaBalai->getOriginal('file'))) {
+            \Illuminate\Support\Facades\Storage::disk('public')->delete($kinerjaBalai->getOriginal('file'));
+        }
     }
 
     /**
@@ -27,7 +29,9 @@ class KinerjaBalaiObserver
      */
     public function deleted(KinerjaBalai $kinerjaBalai): void
     {
-        //
+        if (!is_null($kinerjaBalai->file)) {
+            \Illuminate\Support\Facades\Storage::disk('public')->delete($kinerjaBalai->file);
+        }
     }
 
     /**

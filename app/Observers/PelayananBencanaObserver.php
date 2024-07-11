@@ -19,7 +19,9 @@ class PelayananBencanaObserver
      */
     public function updated(PelayananBencana $pelayananBencana): void
     {
-        //
+        if ($pelayananBencana->isDirty('file') && !is_null($pelayananBencana->getOriginal('file'))) {
+            \Illuminate\Support\Facades\Storage::disk('public')->delete($pelayananBencana->getOriginal('file'));
+        }
     }
 
     /**
@@ -27,7 +29,9 @@ class PelayananBencanaObserver
      */
     public function deleted(PelayananBencana $pelayananBencana): void
     {
-        //
+        if (!is_null($pelayananBencana->file)) {
+            \Illuminate\Support\Facades\Storage::disk('public')->delete($pelayananBencana->file);
+        }
     }
 
     /**
