@@ -7,7 +7,7 @@
             data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="700" style="animation-delay: 700ms;">
 
             @if ($post->id == 1)
-                {{ $post->body }}
+                @include('home.halaman.visi')
             @elseif ($post->id == 3)
                 @include('home.halaman.struktur')
             @else

@@ -4,6 +4,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon_io/favicon.ico">
     <!-- Basic -->
     <title>
         Direktorat Jenderal Sumber Daya Air | Balai WIlayah Sungai Kalimantan IV Samarinda
