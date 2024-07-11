@@ -14,7 +14,15 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/semua-berita', [HomeController::class, 'semuaBerita'])->name('semuaBerita');
 Route::get('/selengkapya/{id}', [HomeController::class, 'selengkapBerita'])->name('selengkapBerita');
+Route::get('/page/{id}', [HomeController::class, 'page'])->name('page');
+Route::get('/lokasi', function () {
+    return view('home.halaman.lokasi');
+})->name('lokasi');
 
+Route::get('/sda/{id}', [HomeController::class, 'sda'])->name('sda');
+
+
+Route::get('/publikasi/{name}', [HomeController::class, 'lapSatgas'])->name('lapSatgas');
 // Route::get('/tes', function () {
 //     return view('home.content.selengkapPost');
 // })->name('tes');

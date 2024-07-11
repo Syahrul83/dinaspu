@@ -22,7 +22,16 @@
                             </li>
                         </ul>
                         <h5 class="text-4 mt-1">Social Media</h5>
-                        <div class="col mb-5"> <a href="{{$kontak->sda_tv}}" target="_blank"> <img src="./assets/sdatv1.png" style="height:28px;width:65px;margin-top: -14px;padding-right: 10px;" alt="SDA TV"></a> <a href="{{ $kontak->twitter }}" style="color:#fff;padding-right: 10px;" target="_blank"> <i class="fab fa-2x fa-twitter-square"></i>&nbsp;</a> <a href="{{ $kontak->instagram }}" style="color:#fff;padding-right:10px;" target="_blank"> <i class="fab fa-2x fa-instagram"></i>&nbsp;</a> <a href="{{ $kontak->youtube }}" style="color:#fff;" target="_blank"> <i class="fab fa-2x fa-youtube-square"></i>&nbsp;</a> </div>
+                        <div class="col mb-5"> <a href="{{$kontak->sda_tv}}" target="_blank"> <img
+                                    src="/assets/sdatv1.png"
+                                    style="height:28px;width:65px;margin-top: -14px;padding-right: 10px;"
+                                    alt="SDA TV"></a> <a href="{{ $kontak->twitter }}"
+                                style="color:#fff;padding-right: 10px;" target="_blank"> <i
+                                    class="fab fa-2x fa-twitter-square"></i>&nbsp;</a> <a
+                                href="{{ $kontak->instagram }}" style="color:#fff;padding-right:10px;" target="_blank">
+                                <i class="fab fa-2x fa-instagram"></i>&nbsp;</a> <a href="{{ $kontak->youtube }}"
+                                style="color:#fff;" target="_blank"> <i
+                                    class="fab fa-2x fa-youtube-square"></i>&nbsp;</a> </div>
                     </div>
                 </div>
             </div>

@@ -6,22 +6,11 @@
         <div class="col-12 col-lg-12 appear-animation animated fadeInLeftShorter appear-animation-visible"
             data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="700" style="animation-delay: 700ms;">
             <div class="card">
-                <div class="card-side bg-color-primary text-3 text-uppercase "> Visi </div>
+                <div class="card-side bg-color-primary text-3 text-uppercase "> Lokasi Kantor</div>
                 <br>
 
-                Isi Visi
-
+                {!! $kontak->gmap !!}
             </div>
-            <br>
-
-            <div class="card">
-                <div class="card-side bg-color-primary text-3 text-uppercase ">Misi</div>
-                <br>
-                isi Misi
-            </div>
-            <br>
-
-
         </div>
     </div>
 </div>

@@ -67,16 +67,16 @@
                                         <li class="dropdown"><a href="#" class="dropdown-item dropdown-toggle">PROFIL<i
                                                     class="fas fa-chevron-down"></i></a>
                                             <ul class="dropdown-menu">
-                                                <li><a href="{{ route('visi-misi') }}" class="dropdown-item">Visi dan
+                                                <li><a href="{{ route('page', 1) }}" class="dropdown-item">Visi dan
                                                         Misi</a>
                                                 </li>
-                                                <li><a href="{{ route('tusi') }}" class="dropdown-item">Tugas dan
+                                                <li><a href="{{ route('page', 2) }}" class="dropdown-item">Tugas dan
                                                         Fungsi</a></li>
-                                                <li><a href="{{ route('struktur') }}" class="dropdown-item">Struktur
+                                                <li><a href="{{ route('page', 3) }}" class="dropdown-item">Struktur
                                                         Organisasi</a></li>
-                                                <li><a href="{{ route('sejarah') }}" class="dropdown-item">Sejarah</a>
+                                                <li><a href="{{ route('page', 4) }}" class="dropdown-item">Sejarah</a>
                                                 </li>
-                                                <li><a href="{{ route('lokasi-kantor') }}" class="dropdown-item">Lokasi
+                                                <li><a href="{{ route('lokasi') }}" class="dropdown-item">Lokasi
                                                         Kantor</a></li>
                                             </ul>
                                         </li>
@@ -84,51 +84,53 @@
                                                 class="dropdown-item dropdown-toggle">KELEMBAGAAN<i
                                                     class="fas fa-chevron-down"></i></a>
                                             <ul class="dropdown-menu">
-                                                <li><a href="{{ route('tkpsda') }}" class="dropdown-item">TKSPDA</a>
+                                                <li><a href="{{ route('page', 6) }}" class="dropdown-item">TKSPDA</a>
                                                 </li>
-                                                <li><a href="{{ route('kmps') }}" class="dropdown-item">KOMUNITAS PEDULI
+                                                <li><a href="{{ route('page', 7) }}" class="dropdown-item">KOMUNITAS
+                                                        PEDULI
                                                         SUNGAI</a></li>
-                                                <li><a href="{{ route('komir') }}" class="dropdown-item">KOMISI
+                                                <li><a href="{{ route('page', 8) }}" class="dropdown-item">KOMISI
                                                         IRIGASI</a></li>
-                                                <li><a href="{{ route('p3a') }}" class="dropdown-item">P3A</a></li>
-                                                <li><a href="{{ route('gnkpa') }}" class="dropdown-item">GNKPA</a></li>
+                                                <li><a href="{{ route('page', 9) }}" class="dropdown-item">P3A</a></li>
+                                                <li><a href="{{ route('page', 10) }}" class="dropdown-item">GNKPA</a>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li class="dropdown"><a href="#" class="dropdown-item dropdown-toggle">LAYANAN
                                                 dan Aplikasi<i class="fas fa-chevron-down"></i></a>
                                             <ul class="dropdown-menu">
-                                                <li><a href="{{ route('rekomtek') }}" class="dropdown-item">Rekomtek
+                                                <li><a href="{{ route('page', 11) }}" class="dropdown-item">Rekomtek
                                                         SDA</a></li>
 
                                                 <li class="dropdown-submenu"><a href="#" class="dropdown-item">SISDA <i
                                                             class="fas fa-chevron-down"></i></a>
                                                     <ul class="dropdown-menu">
-                                                        <li><a href="{{ route('hidrologi') }}" class="dropdown-item">
+                                                        <li><a href="{{ route('page', 12) }}" class="dropdown-item">
                                                                 Informasi Hidrologi</a></li>
-                                                        <li><a href="{{ route('irwa') }}"
+                                                        <li><a href="{{ route('page', 13) }}"
                                                                 class="dropdown-item">Informasi Irigasi dan Rawa</a>
                                                         </li>
-                                                        <li><a href="{{ route('bendungan-waduk') }}"
+                                                        <li><a href="{{ route('page', 14) }}"
                                                                 class="dropdown-item">Informasi Bendungan dan Waduk</a>
                                                         </li>
-                                                        <li><a href="{{ route('bendung') }}"
+                                                        <li><a href="{{ route('page', 15) }}"
                                                                 class="dropdown-item">Informasi Bendung</a></li>
-                                                        <li><a href="{{ route('sungai') }}"
+                                                        <li><a href="{{ route('page', 16) }}"
                                                                 class="dropdown-item">Informasi Sungai</a></li>
-                                                        <li><a href="{{ route('danau') }}"
+                                                        <li><a href="{{ route('page', 17) }}"
                                                                 class="dropdown-item">Informasi Danau</a></li>
-                                                        <li><a href="{{ route('sumur-dalam') }}"
+                                                        <li><a href="{{ route('page', 18) }}"
                                                                 class="dropdown-item">Informasi Sumur Dalam</a></li>
-                                                        <li><a href="{{ route('alokasi-air') }}"
+                                                        <li><a href="{{ route('page', 19) }}"
                                                                 class="dropdown-item">Informasi Alokasi Air</a></li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="{{ route('webgis') }}" class="dropdown-item">WebGIS BWS
+                                                <li><a href="{{ route('page', 20) }}" class="dropdown-item">WebGIS BWS
                                                         KIV-SMD</a></li>
-                                                <li><a href="{{ route('sih3') }}" class="dropdown-item">SIH3 WS
+                                                <li><a href="{{ route('page', 21) }}" class="dropdown-item">SIH3 WS
                                                         Mahakam</a></li>
-                                                <li><a href="{{ route('laporan-bencana') }}"
-                                                        class="dropdown-item">Laporan Bencana</a></li>
+                                                <li><a href="{{ route('page', 22) }}" class="dropdown-item">Laporan
+                                                        Bencana</a></li>
                                             </ul>
                                         </li>
                                         <li class="dropdown"><a href="#"
@@ -138,34 +140,36 @@
                                                 <li class="dropdown-submenu"><a href="#" class="dropdown-item">Informasi
                                                         SDA<i class="fas fa-chevron-down"></i></a>
                                                     <ul class="dropdown-menu">
-                                                        <li><a href="{{ route('pola') }}" class="dropdown-item">Pola
+                                                        <li><a href="{{ route('sda', 1) }}" class="dropdown-item">Pola
                                                                 Wilayah Sungai</a>
                                                         </li>
-                                                        <li><a href="{{ route('rpsda') }}" class="dropdown-item">Rencana
+                                                        <li><a href="{{ route('sda', 2) }}"
+                                                                class="dropdown-item">Rencana
                                                                 PSDA Wilayah
                                                                 Sungai</a></li>
-                                                        <li><a href="{{ route('sebaran-perijinan') }}"
-                                                                class="dropdown-item">Sebaran Perijinan SDA</a></li>
+                                                        <li><a href="{{ route('sda', 3) }}"
+                                                                class="dropdown-item">Sebaran
+                                                                Perijinan SDA</a></li>
                                                     </ul>
                                                 </li>
                                                 <li class="dropdown-submenu"><a href="#" class="dropdown-item">Laporan
                                                         Satgas Bencana SDA<i class="fas fa-chevron-down"></i></a>
                                                     <ul class="dropdown-menu">
-                                                        <li><a href="{{ route('laporan-banjir') }}"
+                                                        <li><a href="{{ route('lapSatgas', 'banjir') }}"
                                                                 class="dropdown-item">Laporan Banjir</a>
                                                         </li>
-                                                        <li><a href="{{ route('laporan-kekeringan') }}"
+                                                        <li><a href="{{ route('lapSatgas', 'kekeringan') }}"
                                                                 class="dropdown-item">Laporan Kekeringan</a></li>
                                                     </ul>
                                                 </li>
                                                 <li class="dropdown-submenu"><a href="#" class="dropdown-item">Media
                                                         Informasi <i class="fas fa-chevron-down"></i></a>
                                                     <ul class="dropdown-menu">
-                                                        <li><a href="{{ route('majalah-pesut') }}"
+                                                        <li><a href="{{ route('lapSatgas', 'majalah-pesut') }}"
                                                                 class="dropdown-item">Majalah Pesut</a></li>
-                                                        <li><a href="{{ route('buku-data') }}"
+                                                        <li><a href="{{ route('lapSatgas', 'buku-data') }}"
                                                                 class="dropdown-item">Buku Data</a></li>
-                                                        <li><a href="{{ route('publikasi-hidrologi') }}"
+                                                        <li><a href="{{ route('lapSatgas', 'publikasi-hidrologi') }}"
                                                                 class="dropdown-item">Publikasi Hidrologi</a></li>
                                                     </ul>
                                                 </li>

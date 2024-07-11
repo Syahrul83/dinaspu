@@ -14,7 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->string('title')->nullable();
             $table->string('slug')->nullable();
-            $table->string('body')->nullable();
+            $table->text('body')->nullable();
             $table->string('image')->nullable();
             $table->string('user_id');
             $table->boolean('active')->default(true);

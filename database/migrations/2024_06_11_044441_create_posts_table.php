@@ -13,7 +13,7 @@ return new class extends Migration {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
-            $table->string('body')->nullable();
+            $table->text('body')->nullable();
             $table->string('image')->nullable();
             $table->string('kategori_id')->nullable();
             $table->string('user_id');
