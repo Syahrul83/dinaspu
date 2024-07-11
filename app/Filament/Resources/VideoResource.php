@@ -33,6 +33,13 @@ class VideoResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('title')->required(),
                 Forms\Components\TextInput::make('link')->required(),
+                Forms\Components\FileUpload::make('image')
+                    ->image()
+                    ->directory('video')
+                    ->imageResizeMode('cover')
+                    ->imageResizeTargetWidth('750')
+                    ->maxSize(2024),
+
             ]);
     }
 
@@ -40,10 +47,13 @@ class VideoResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('No')->rowIndex(),
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('link')
                     ->searchable(),
+                Tables\Columns\ImageColumn::make('image')
+                    ->width(200),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -52,7 +62,7 @@ class VideoResource extends Resource
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-            ])
+            ])->defaultSort('id', 'desc')
             ->filters([
                 //
             ])

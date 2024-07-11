@@ -38,7 +38,7 @@ class FotoResource extends Resource
                     ->image()
                     ->directory('foto')
                     ->imageResizeMode('cover')
-                    ->imageResizeTargetWidth('800')
+                    ->imageResizeTargetWidth('750')
                     ->maxSize(2024)
                     ->columnSpanFull(),
             ]);
@@ -48,6 +48,7 @@ class FotoResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('No')->rowIndex(),
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
                 Tables\Columns\ImageColumn::make('image')
@@ -60,7 +61,7 @@ class FotoResource extends Resource
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-            ])
+            ])->defaultSort('id', 'desc')
             ->filters([
                 //
             ])

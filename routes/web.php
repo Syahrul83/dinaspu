@@ -23,6 +23,10 @@ Route::get('/sda/{id}', [HomeController::class, 'sda'])->name('sda');
 
 
 Route::get('/publikasi/{name}', [HomeController::class, 'lapSatgas'])->name('lapSatgas');
+
+Route::get('/galleri/{name}', [HomeController::class, 'galleri'])->name('galleri');
+
+
 // Route::get('/tes', function () {
 //     return view('home.content.selengkapPost');
 // })->name('tes');

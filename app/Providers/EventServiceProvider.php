@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Models\Sda;
 use App\Models\Foto;
+use App\Models\Video;
 use App\Models\Banjir;
 use App\Models\Header;
 use App\Models\BukuData;
@@ -12,6 +13,7 @@ use App\Models\Kekeringan;
 use App\Models\MajalahPesut;
 use App\Observers\SdaObserver;
 use App\Observers\FotoObserver;
+use App\Observers\VideoObserver;
 use App\Observers\BanjirObserver;
 use App\Observers\HeaderObserver;
 use App\Models\PublikasiHidrologi;
@@ -46,5 +48,6 @@ class EventServiceProvider extends ServiceProvider
         Sda::observe(SdaObserver::class);
         Header::observe(HeaderObserver::class);
         Infografis::observe(InfografisObserver::class);
+        Video::observe(VideoObserver::class);
     }
 }

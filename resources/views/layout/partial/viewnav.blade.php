@@ -176,9 +176,9 @@
                                                 <li class="dropdown-submenu"><a href="#" class="dropdown-item">Galeri <i
                                                             class="fas fa-chevron-down"></i></a>
                                                     <ul class="dropdown-menu">
-                                                        <li><a href="{{ route('galery-foto') }}"
+                                                        <li><a href="{{ route('galleri', 'foto') }}"
                                                                 class="dropdown-item">Galeri Foto</a></li>
-                                                        <li><a href="{{ route('galery-video') }}"
+                                                        <li><a href="{{ route('galleri', 'video') }}"
                                                                 class="dropdown-item">Galeri Video</a></li>
                                                     </ul>
                                                 </li>

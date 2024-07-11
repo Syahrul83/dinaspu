@@ -2,19 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Banjir;
-use App\Models\BukuData;
-use App\Models\Kekeringan;
-use App\Models\MajalahPesut;
-use App\Models\PublikasiHidrologi;
 use App\Models\Sda;
+use App\Models\Foto;
 use App\Models\Post;
 use App\Models\Video;
+use App\Models\Banjir;
 use App\Models\Header;
 use App\Models\Kontak;
 use App\Models\Halaman;
+use App\Models\BukuData;
 use App\Models\Infografis;
+use App\Models\Kekeringan;
+use App\Models\MajalahPesut;
 use Illuminate\Http\Request;
+use App\Models\PublikasiHidrologi;
 
 class HomeController extends Controller
 {
@@ -82,4 +83,17 @@ class HomeController extends Controller
 
         return view('home.publikasi.laporan-satgas', compact('posts'));
     }
+
+
+    public function galleri($name)
+    {
+        if ($name == 'foto') {
+            $posts = Foto::latest()->paginate(12);
+            return view('home.galleri.galery-foto', compact('posts'));
+        } else {
+            $posts = Video::latest()->paginate(12);
+            return view('home.galleri.galery-video', compact('posts'));
+        }
+    }
+
 }
