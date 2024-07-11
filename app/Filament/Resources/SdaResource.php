@@ -34,7 +34,7 @@ class SdaResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('title'),
+                Forms\Components\TextInput::make('title')->readOnly(),
 
                 Forms\Components\FileUpload::make('file')
                     ->uploadingMessage('Uploading attachment...')
