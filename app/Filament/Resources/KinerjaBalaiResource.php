@@ -19,12 +19,27 @@ class KinerjaBalaiResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+
+
+    protected static ?string $navigationGroup = 'Hasil Survey Kepuasan';
+
+    protected static ?string $navigationLabel = 'Kinerja Balai';
+    protected static ?string $pluralModelLabel = 'Kinerja Balai';
+
+    protected ?string $heading = 'Kinerja Balai';
+
+    protected static ?int $navigationSort = 1;
+
+
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('title'),
-                Forms\Components\TextInput::make('file'),
+                Forms\Components\TextInput::make('title')->required(),
+                Forms\Components\FileUpload::make('file')->required()
+                    ->uploadingMessage('Uploading attachment...')
+                    ->acceptedFileTypes(['application/pdf'])
+                    ->directory('kinerja_balai'),
             ]);
     }
 
@@ -32,6 +47,7 @@ class KinerjaBalaiResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('No')->rowIndex(),
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('file')
@@ -50,6 +66,8 @@ class KinerjaBalaiResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make()
+                    ->requiresConfirmation()
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -69,8 +87,8 @@ class KinerjaBalaiResource extends Resource
     {
         return [
             'index' => Pages\ListKinerjaBalais::route('/'),
-            'create' => Pages\CreateKinerjaBalai::route('/create'),
-            'edit' => Pages\EditKinerjaBalai::route('/{record}/edit'),
+            // 'create' => Pages\CreateKinerjaBalai::route('/create'),
+            // 'edit' => Pages\EditKinerjaBalai::route('/{record}/edit'),
         ];
     }
 }

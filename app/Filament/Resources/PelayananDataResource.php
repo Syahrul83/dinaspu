@@ -18,13 +18,24 @@ class PelayananDataResource extends Resource
     protected static ?string $model = PelayananData::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup = 'Hasil Survey Kepuasan';
+
+    protected static ?string $navigationLabel = 'Pelayanan Data';
+    protected static ?string $pluralModelLabel = 'Pelayanan Data';
+
+    protected ?string $heading = 'Pelayanan Data';
+
+    protected static ?int $navigationSort = 3;
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('title'),
-                Forms\Components\TextInput::make('file'),
+                Forms\Components\TextInput::make('title')->required(),
+                Forms\Components\FileUpload::make('file')->required()
+                    ->uploadingMessage('Uploading attachment...')
+                    ->acceptedFileTypes(['application/pdf'])
+                    ->directory('pelayanan_data'),
             ]);
     }
 
@@ -32,6 +43,7 @@ class PelayananDataResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('No')->rowIndex(),
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('file')
@@ -47,9 +59,11 @@ class PelayananDataResource extends Resource
             ])
             ->filters([
                 //
-            ])
+            ])->defaultSort('id', 'desc')
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make()
+                    ->requiresConfirmation()
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -69,8 +83,8 @@ class PelayananDataResource extends Resource
     {
         return [
             'index' => Pages\ListPelayananData::route('/'),
-            'create' => Pages\CreatePelayananData::route('/create'),
-            'edit' => Pages\EditPelayananData::route('/{record}/edit'),
+            // 'create' => Pages\CreatePelayananData::route('/create'),
+            // 'edit' => Pages\EditPelayananData::route('/{record}/edit'),
         ];
     }
 }

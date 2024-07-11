@@ -185,19 +185,19 @@
                                                 <li class="dropdown-submenu"><a href="#" class="dropdown-item">Hasil
                                                         Survey Kepuasan<i class="fas fa-chevron-down"></i></a>
                                                     <ul class="dropdown-menu">
-                                                        <li><a href="{{ route('kinerja-balai') }}"
+                                                        <li><a href="{{ route('survey', 'kinerja-balai') }}"
                                                                 class="dropdown-item">Kinerja Balai</a></li>
-                                                        <li><a href="{{ route('pelayanan-perijinan') }}"
+                                                        <li><a href="{{ route('survey', 'perijinan') }}"
                                                                 class="dropdown-item">Pelayanan Perijinan</a></li>
-                                                        <li><a href="{{ route('pelayanan-data') }}"
+                                                        <li><a href="{{ route('survey', 'data')}}"
                                                                 class="dropdown-item">Pelayanan Data</a></li>
-                                                        <li><a href="{{ route('tata-kelola-infrastruktur') }}"
+                                                        <li><a href="{{ route('survey', 'sda') }}"
                                                                 class="dropdown-item">Layanan Tata Kelola Infsratruktur
                                                                 SDA</a></li>
-                                                        <li><a href="{{ route('layanan-barjas') }}"
+                                                        <li><a href="{{ route('survey', 'barang-jasa') }}"
                                                                 class="dropdown-item">Layanan Pengadaan Barang dan
                                                                 Jasa</a></li>
-                                                        <li><a href="{{ route('layanan-tanggap-darurat-pasca-bencana') }}"
+                                                        <li><a href="{{ route('survey', 'pasca-bencana') }}"
                                                                 class="dropdown-item">Layanan Tanggap Darurat Pasca
                                                                 Bencana</a></li>
                                                     </ul>
@@ -210,11 +210,12 @@
                                                 class="dropdown-item dropdown-toggle">Pengaduan<i
                                                     class="fas fa-chevron-down"></i></a>
                                             <ul class="dropdown-menu">
-                                                <li><a href="{{ route('lapor') }}" class="dropdown-item">L.A.P.O.R.!</a>
+                                                <li><a target="_blank" href="{{ $link1 }}"
+                                                        class="dropdown-item">L.A.P.O.R.!</a>
                                                 </li>
-                                                <li><a href="{{ route('gratifikasi') }}"
+                                                <li><a target="_blank" href="{{ $link2 }}"
                                                         class="dropdown-item">e-GRATIFIKASI</a></li>
-                                                <li><a href="{{ route('wbs') }}" class="dropdown-item">Wistle
+                                                <li><a target="_blank" href="{{ $link3 }}" class="dropdown-item">Wistle
                                                         Blowing System</a></li>
                                                 <li><a href="{{ route('lapor-kabalai') }}" class="dropdown-item">Lapor
                                                         BWS KIV SMD</a></li>

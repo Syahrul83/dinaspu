@@ -26,6 +26,8 @@ Route::get('/publikasi/{name}', [HomeController::class, 'lapSatgas'])->name('lap
 
 Route::get('/galleri/{name}', [HomeController::class, 'galleri'])->name('galleri');
 
+Route::get('/hasil-survey-kepuasan/{name}', [HomeController::class, 'surveyKepuasan'])->name('survey');
+
 
 // Route::get('/tes', function () {
 //     return view('home.content.selengkapPost');

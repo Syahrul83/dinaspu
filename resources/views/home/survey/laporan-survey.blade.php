@@ -8,7 +8,7 @@
         <thead class="text-center table-primary">
             <tr>
                 <th scope="col">No</th>
-                <th scope="col">Periode Kejadian</th>
+                <th scope="col">Periode</th>
                 <th scope="col">Aksi</th>
             </tr>
         </thead>

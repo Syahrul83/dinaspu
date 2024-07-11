@@ -2,6 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\KinerjaBalai;
+use App\Models\PelayananBencana;
+use App\Models\PelayananData;
+use App\Models\PelayananPegadaan;
+use App\Models\PelayananPerijinan;
+use App\Models\PelayananSda;
 use App\Models\Sda;
 use App\Models\Foto;
 use App\Models\Post;
@@ -67,21 +73,27 @@ class HomeController extends Controller
 
     public function lapSatgas($name)
     {
+
         if ($name == 'banjir') {
+            $title = 'LAPORAN BANJIR';
             $posts = Banjir::latest()->paginate(15);
         } elseif ($name == 'kekeringan') {
+            $title = 'LAPORAN KEKERINGAN';
             $posts = Kekeringan::latest()->paginate(15);
         } elseif ($name == 'majalah-pesut') {
+            $title = 'MAJALAH PESUT';
             $posts = MajalahPesut::latest()->paginate(15);
         } elseif ($name == 'buku-data') {
+            $title = 'BUKU DATA';
             $posts = BukuData::latest()->paginate(15);
         } elseif ($name == 'publikasi-hidrologi') {
+            $title = 'PUBLIKASI HIDROLOGI';
             $posts = PublikasiHidrologi::latest()->paginate(15);
         }
 
 
 
-        return view('home.publikasi.laporan-satgas', compact('posts'));
+        return view('home.publikasi.laporan-satgas', compact('posts', 'title'));
     }
 
 
@@ -95,5 +107,37 @@ class HomeController extends Controller
             return view('home.galleri.galery-video', compact('posts'));
         }
     }
+
+
+    public function surveyKepuasan($name)
+    {
+        if ($name == 'kinerja-balai') {
+            $title = 'LAPORAN SURVEY KEPUASAN KINERJA BALAI';
+            $posts = KinerjaBalai::latest()->paginate(15);
+        } elseif ($name == 'perijinan') {
+            $title = 'LAPORAN SURVEY KEPUASAN PELAYANAN PERIJINAN';
+            $posts = PelayananPerijinan::latest()->paginate(15);
+        } elseif ($name == 'data') {
+            $title = 'LAPORAN SURVEY KEPUASAN PELAYANAN DATA';
+            $posts = PelayananData::latest()->paginate(15);
+        } elseif ($name == 'sda') {
+            $title = 'LAPORAN SURVEY KEPUASAN TATA KELOLA INFRASTRUKTUR SDA';
+            $posts = PelayananSda::latest()->paginate(15);
+        } elseif ($name == 'barang-jasa') {
+            $title = 'LAPORAN SURVEY KEPUASAN LAYANAN PENGADAAN BARANG DAN JASA';
+            $posts = PelayananPegadaan::latest()->paginate(15);
+        } elseif ($name == 'pasca-bencana') {
+            $title = ' LAPORAN SURVEY KEPUASAN TANGGAP DARURAT PASCA BENCANA';
+            $posts = PelayananBencana::latest()->paginate(15);
+        }
+
+
+
+        return view('home.survey.laporan-survey', compact('posts', 'title'));
+    }
+
+
+
+
 
 }
