@@ -33,6 +33,7 @@ class VideoResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('title')->required(),
                 Forms\Components\TextInput::make('link')->required(),
+                Forms\Components\TextInput::make('ket')->label('Keterangan'),
                 Forms\Components\FileUpload::make('image')
                     ->image()
                     ->directory('video')
@@ -68,6 +69,8 @@ class VideoResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make()
+                    ->requiresConfirmation()
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

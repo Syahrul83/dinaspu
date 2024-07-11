@@ -17,10 +17,11 @@
             <div class="col">
                 <div class="thumb-info-caption-text">
                     <div class="d-inline-block text-default text-1 mt-2 float-none">
-                        <a target="_blank" href="https://www.youtube.com/watch?v={{$video->link}}olor-default">{{$video->created_at->format('d M Y')}}</a>
+                        {{$video->created_at->format('d M Y')}}
                     </div>
                     <h4 class="d-block line-height-2 text-4 text-dark font-weight-bold mb-0">
-                        <a target="_blank" href="https://www.youtube.com/watch?v={{$video->link}}decoration-none text-color-dark text-color-hover-primary">{{$video->title}}</a>
+                        <a href="/galleri/video" class="decoration-none text-color-dark
+                            text-color-hover-primary">{{$video->title}}</a>
                     </h4>
                 </div>
             </div>

@@ -10,11 +10,10 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('fotos', function (Blueprint $table) {
+        Schema::create('pelayanan_data', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
-            $table->string('ket')->nullable();
-            $table->text('image')->nullable();
+            $table->string('file')->nullable();
             $table->timestamps();
         });
     }
@@ -24,6 +23,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('fotos');
+        Schema::dropIfExists('pelayanan_data');
     }
 };

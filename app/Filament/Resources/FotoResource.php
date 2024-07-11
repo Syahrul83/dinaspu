@@ -33,8 +33,10 @@ class FotoResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('title'),
+                Forms\Components\TextInput::make('title')->required(),
+                Forms\Components\TextInput::make('ket')->label('Keterangan'),
                 Forms\Components\FileUpload::make('image')
+                    ->required()
                     ->image()
                     ->directory('foto')
                     ->imageResizeMode('cover')

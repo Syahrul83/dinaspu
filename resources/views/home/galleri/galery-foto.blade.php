@@ -22,13 +22,18 @@
                         <img src="{{ asset('storage/' . $post->image) }}" alt="Image" class="img-top bg-dark bg-gradient img-thumb" data-bs-toggle="modal" data-bs-target="#imageViewerModal" data-title="{{ $post->title }}" data-description="Keterangan Foto">
                     </div>
                     <h6 class="text-center mt-1">{{ $post->title }}</h6>
-                    <p class="text-center">Keterangan Foto</p>
+                    <p class="text-center">{{ $post->ket }}</p>
                 </div>
             </div>
             @endforeach
         </div>
+
     </div>
+    <br><br>
+    {{ $posts->links() }}
 </div>
+
+
 
 <!-- Image Viewer Modal -->
 <div class="modal fade" id="imageViewerModal" tabindex="-1" aria-labelledby="imageViewerModalLabel" aria-hidden="true">
@@ -51,7 +56,7 @@
             </div>
             <div class="text-center">
                 <h6 id="modal-title">Judul Foto</h6>
-                <p id="modal-description">Keterangan Foto</p>
+                {{-- <p id="modal-description">Keterangan Foto</p> --}}
             </div>
         </div>
     </div>
