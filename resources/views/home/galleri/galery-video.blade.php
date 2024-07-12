@@ -14,7 +14,11 @@
                     @foreach ($posts as $post)
                         <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
                             <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
-                                <img src="{{ asset('storage/' . $post->image) }}" class="w-100" />
+                                @if (isset($post->image))
+                                    <img src="{{ asset('storage/' . $post->image) }}" class="w-100" />
+                                @else
+                                    <img src="{{ asset('assets/default.jpg') }}" class="w-100" />
+                                @endif
                                 <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal1-{{ $post->id }}">
                                     <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
                                 </a>
