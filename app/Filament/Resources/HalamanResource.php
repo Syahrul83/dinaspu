@@ -63,7 +63,7 @@ class HalamanResource extends Resource
                                     ->maxSize(2024),
                                 Forms\Components\Hidden::make('user_id')
                                     ->default(auth()->user()->id),
-                                Forms\Components\toggleButtons::make('active')
+                                Forms\Components\ToggleButtons::make('active')
                                     ->options([
                                         '1' => 'Published',
                                         '0' => 'Draft',
