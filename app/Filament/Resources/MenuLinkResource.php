@@ -29,7 +29,7 @@ class MenuLinkResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('title')->readOnly(),
+                Forms\Components\TextInput::make('title')->required(),
                 Forms\Components\TextInput::make('link'),
 
             ]);
@@ -44,12 +44,14 @@ class MenuLinkResource extends Resource
                     ->sortable(),
                 Tables\Columns\TextColumn::make('link'),
 
-            ])->paginated(false)
+            ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make()
+                    ->requiresConfirmation()
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

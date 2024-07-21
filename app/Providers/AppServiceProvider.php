@@ -39,16 +39,18 @@ class AppServiceProvider extends ServiceProvider
         View::share('sidebar', $sidebar);
 
         // polri
-        $link1 = MenuLink::where('id', 1)->pluck('link')->first();
-        View::share('link1', $link1);
+        // $link1 = MenuLink::where('id', 1)->pluck('link')->first();
+        // View::share('link1', $link1);
 
-        // gratifikasi
-        $link2 = MenuLink::where('id', 2)->pluck('link')->first();
-        View::share('link2', $link2);
+        // // gratifikasi
+        // $link2 = MenuLink::where('id', 2)->pluck('link')->first();
+        // View::share('link2', $link2);
 
-        // Wisel Bloaiwng
-        $link3 = MenuLink::where('id', 3)->pluck('link')->first();
-        View::share('link3', $link3);
+        // // Wisel Bloaiwng
+        // $link3 = MenuLink::where('id', 3)->pluck('link')->first();
+        // View::share('link3', $link3);
+        $links = MenuLink::all();
+        View::share('links', $links);
 
 
         $tugas = Tugas::where('active', 1)->get();

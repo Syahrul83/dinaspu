@@ -210,15 +210,13 @@
                                                 class="dropdown-item dropdown-toggle">Pengaduan<i
                                                     class="fas fa-chevron-down"></i></a>
                                             <ul class="dropdown-menu">
-                                                <li><a target="_blank" href="{{ $link1 }}"
-                                                        class="dropdown-item">L.A.P.O.R.!</a>
-                                                </li>
-                                                <li><a target="_blank" href="{{ $link2 }}"
-                                                        class="dropdown-item">e-GRATIFIKASI</a></li>
-                                                <li><a target="_blank" href="{{ $link3 }}" class="dropdown-item">Wistle
-                                                        Blowing System</a></li>
-                                                <li><a href="{{ route('lapor-kabalai') }}" class="dropdown-item">Lapor
-                                                        BWS KIV SMD</a></li>
+
+
+                                                @foreach ($links as $link)
+                                                    <li> <a target="_blank" href="{{ $link->link }}"
+                                                            class="dropdown-item">{{ $link->title }}</a></li>
+                                                @endforeach
+
                                             </ul>
                                         </li>
                                     </ul>
