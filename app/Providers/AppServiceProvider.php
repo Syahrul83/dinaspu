@@ -2,9 +2,10 @@
 
 namespace App\Providers;
 
-use App\Models\MenuLink;
 use App\Models\Post;
+use App\Models\Tugas;
 use App\Models\Kontak;
+use App\Models\MenuLink;
 use App\Observers\PostObserver;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\View;
@@ -48,5 +49,9 @@ class AppServiceProvider extends ServiceProvider
         // Wisel Bloaiwng
         $link3 = MenuLink::where('id', 3)->pluck('link')->first();
         View::share('link3', $link3);
+
+
+        $tugas = Tugas::where('active', 1)->get();
+        View::share('tugas', $tugas);
     }
 }

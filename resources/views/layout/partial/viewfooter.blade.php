@@ -2,12 +2,19 @@
     <div class="container">
         <div class="footer-ribbon"> <span>Informasi</span> </div>
         <div class="row pt-5 mt-4 mb-0">
-            <div class="col-md-8 mb-4 mb-lg-0"> <a href="https://sda.pu.go.id/" class="logo">
+            <div class="col-md-6 mb-4 mb-lg-0"> <a href="#" class="logo">
                     <!-- <img alt="SDA" src="img/logo-footer.png" class="opacity-7 bottom-4" height="32">-->
                     <h1><strong>Balai Wilayah Sungai <br> Kalimantan IV Samarinda</strong></h1>
                 </a> <!-- <p style="color: #fff">Alamat:</p>--> <span style="color: #fff"> Kantor BWS Kalimantan IV
                     Samarinda <br>JL. MT. Haryono No. 36, Kota Samarinda, Kalimantan Timur -
                     Indonesia - 75123 </span>
+            </div>
+            <div class="col-md-2 mb-4 mb-lg-0">
+                <a href='https://www.free-counters.org/'></a>
+                <script type='text/javascript'
+                    src='https://www.freevisitorcounters.com/auth.php?id=3d85f09c90f15841ee12e189f2fe276d6d1f3bd9'></script>
+                <script type="text/javascript"
+                    src="https://www.freevisitorcounters.com/en/home/counter/1206167/t/0"></script>
             </div>
             <div class="col-md-4">
                 <h5 class="text-4 mb-3">CONTACT US</h5>

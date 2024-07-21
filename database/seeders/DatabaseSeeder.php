@@ -33,5 +33,6 @@ class DatabaseSeeder extends Seeder
 
         $this->call(PostsTableSeeder::class);
         $this->call(FotosTableSeeder::class);
+        $this->call(TugasTableSeeder::class);
     }
 }
