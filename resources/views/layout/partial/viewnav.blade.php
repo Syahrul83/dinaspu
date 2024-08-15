@@ -96,43 +96,68 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="dropdown"><a href="#" class="dropdown-item dropdown-toggle">LAYANAN
-                                                dan Aplikasi<i class="fas fa-chevron-down"></i></a>
+                                        <li class="dropdown"><a href="#" class="dropdown-item dropdown-toggle">APLIKASI<i class="fas fa-chevron-down"></i></a>
                                             <ul class="dropdown-menu">
-                                                <li><a href="{{ route('page', 11) }}" class="dropdown-item">Rekomtek
-                                                        SDA</a></li>
 
-                                                <li class="dropdown-submenu"><a href="#" class="dropdown-item">SISDA <i
+                                                <li class="dropdown-submenu"><a href="#" class="dropdown-item">Pelayanan Perizinan <i
                                                             class="fas fa-chevron-down"></i></a>
                                                     <ul class="dropdown-menu">
                                                         <li><a href="{{ route('page', 12) }}" class="dropdown-item">
-                                                                Informasi Hidrologi</a></li>
+                                                                Perizinan SDA</a></li>
                                                         <li><a href="{{ route('page', 13) }}"
-                                                                class="dropdown-item">Informasi Irigasi dan Rawa</a>
+                                                                class="dropdown-item">E-Rekomtek</a>
                                                         </li>
-                                                        <li><a href="{{ route('page', 14) }}"
-                                                                class="dropdown-item">Informasi Bendungan dan Waduk</a>
+                                                        <li><a href="{{ route('page', 11) }}"
+                                                                class="dropdown-item">Rekomtek BWS</a>
                                                         </li>
-                                                        <li><a href="{{ route('page', 15) }}"
-                                                                class="dropdown-item">Informasi Bendung</a></li>
-                                                        <li><a href="{{ route('page', 16) }}"
-                                                                class="dropdown-item">Informasi Sungai</a></li>
-                                                        <li><a href="{{ route('page', 17) }}"
-                                                                class="dropdown-item">Informasi Danau</a></li>
-                                                        <li><a href="{{ route('page', 18) }}"
-                                                                class="dropdown-item">Informasi Sumur Dalam</a></li>
-                                                        <li><a href="{{ route('page', 19) }}"
-                                                                class="dropdown-item">Informasi Alokasi Air</a></li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="{{ route('page', 20) }}" class="dropdown-item">WebGIS BWS
-                                                        KIV-SMD</a></li>
-                                                <li><a href="{{ route('page', 21) }}" class="dropdown-item">SIH3 WS
-                                                        Mahakam</a></li>
-                                                <li><a href="{{ route('page', 22) }}" class="dropdown-item">Laporan
-                                                        Bencana</a></li>
+                                                <li class="dropdown-submenu"><a href="#" class="dropdown-item">Data Sumber Daya Air <i
+                                                    class="fas fa-chevron-down"></i></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="{{ route('page', 12) }}" class="dropdown-item">
+                                                        PDSDA/WRDC</a></li>
+                                                <li><a href="{{ route('page', 13) }}"
+                                                        class="dropdown-item">WebGIS BWS KIV SMD</a>
+                                                </li>
+                                                <li><a href="{{ route('page', 14) }}"
+                                                        class="dropdown-item">Informasi Alokasi Air</a>
+                                                </li>
                                             </ul>
                                         </li>
+                                        <li class="dropdown-submenu"><a href="#" class="dropdown-item">Informasi Hidrologi <i
+                                            class="fas fa-chevron-down"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="{{ route('page', 12) }}" class="dropdown-item">
+                                                SIHKA Ditjen SDA</a></li>
+                                        <li><a href="{{ route('page', 12) }}"
+                                                class="dropdown-item">SIHKA BWS KIV SMD</a>
+                                        </li>
+                                        <li><a href="{{ route('page', 21) }}"
+                                                class="dropdown-item">SIH3 WS Mahakam</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu"><a href="#" class="dropdown-item">Informasi Bencana <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{ route('page', 12) }}" class="dropdown-item">
+                                        SITABA</a></li>
+                                <li><a href="{{ route('page', 22) }}"
+                                        class="dropdown-item">Lapor Bencana BWS KIV SMD</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu"><a href="#" class="dropdown-item">Kepatuhan Internal <i
+                            class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ route('page', 12) }}" class="dropdown-item">
+                                SiKIMR</a></li>
+                    </ul>
+                </li>
+
+                                            </ul>
+                </li>
                                         <li class="dropdown"><a href="#"
                                                 class="dropdown-item dropdown-toggle">PUBLIKASI<i
                                                     class="fas fa-chevron-down"></i></a>
@@ -152,7 +177,17 @@
                                                                 Perijinan SDA</a></li>
                                                     </ul>
                                                 </li>
-                                                <li class="dropdown-submenu"><a href="#" class="dropdown-item">Laporan
+                                                <li class="dropdown-submenu"><a href="#" class="dropdown-item">Perencanaan & Kinerja<i class="fas fa-chevron-down"></i></a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="{{ route('sda', 1) }}" class="dropdown-item">Renstra SDA</a>
+                                                    </li>
+                                                    <li><a href="{{ route('sda', 2) }}"
+                                                            class="dropdown-item">Renstra BWS KIV SMD</a></li>
+                                                    <li><a href="{{ route('sda', 3) }}"
+                                                            class="dropdown-item">Laporan Kinerja BWS KIV SMD</a></li>
+                                                </ul>
+                                            </li>
+                                                <li class="dropdown-submenu"><a href="#" class="dropdown-item">Informasi 
                                                         Satgas Bencana SDA<i class="fas fa-chevron-down"></i></a>
                                                     <ul class="dropdown-menu">
                                                         <li><a href="{{ route('lapSatgas', 'banjir') }}"
@@ -186,19 +221,13 @@
                                                         Survey Kepuasan<i class="fas fa-chevron-down"></i></a>
                                                     <ul class="dropdown-menu">
                                                         <li><a href="{{ route('survey', 'kinerja-balai') }}"
-                                                                class="dropdown-item">Kinerja Balai</a></li>
+                                                                class="dropdown-item">Pelayanan Informasi dan Pengaduan</a></li>
                                                         <li><a href="{{ route('survey', 'perijinan') }}"
-                                                                class="dropdown-item">Pelayanan Perijinan</a></li>
+                                                                class="dropdown-item">Pelayanan Hidrologi dan Kualitas Air</a></li>
                                                         <li><a href="{{ route('survey', 'data')}}"
-                                                                class="dropdown-item">Pelayanan Data</a></li>
-                                                        <li><a href="{{ route('survey', 'sda') }}"
-                                                                class="dropdown-item">Layanan Tata Kelola Infsratruktur
-                                                                SDA</a></li>
-                                                        <li><a href="{{ route('survey', 'barang-jasa') }}"
-                                                                class="dropdown-item">Layanan Pengadaan Barang dan
-                                                                Jasa</a></li>
+                                                                class="dropdown-item">Pelayanan Rekomtek</a></li>
                                                         <li><a href="{{ route('survey', 'pasca-bencana') }}"
-                                                                class="dropdown-item">Layanan Tanggap Darurat Pasca
+                                                                class="dropdown-item">Pelayanan Tanggap Darurat Pasca
                                                                 Bencana</a></li>
                                                     </ul>
                                                 </li>
@@ -207,15 +236,44 @@
 
 
                                         <li class="dropdown"><a href="#"
-                                                class="dropdown-item dropdown-toggle">Pengaduan<i
+                                                class="dropdown-item dropdown-toggle">LAYANAN PUBLIK<i
                                                     class="fas fa-chevron-down"></i></a>
                                             <ul class="dropdown-menu">
-
-
+                                                    <li><a href="{{ route('page', 1) }}" class="dropdown-item">Layanan Terpadu</a>
+                                                    </li>                                                    
+                                                            <li class="dropdown-submenu"><a href="#" class="dropdown-item">Pengaduan<i class="fas fa-chevron-down"></i></a>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a href="{{ route('survey', 'kinerja-balai') }}"
+                                                                        class="dropdown-item">Pengaduan PUPR</a></li>
+                                                                <li><a href="{{ route('survey', 'perijinan') }}"
+                                                                        class="dropdown-item">Pengaduan BWS KIV SMD</a></li>
+                                                            </ul>
+                                                        </li>
+                                                            <li class="dropdown-submenu"><a href="#" class="dropdown-item">SOP<i class="fas fa-chevron-down"></i></a>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a href="{{ route('survey', 'kinerja-balai') }}"
+                                                                        class="dropdown-item">SOP Permohonan Data dan Informasi SDA</a></li>
+                                                                <li><a href="{{ route('survey', 'perijinan') }}"
+                                                                        class="dropdown-item">SOP Pelayanan Data Hidrologi dan Kualitas Air</a></li>
+                                                                <li><a href="{{ route('survey', 'perijinan') }}"
+                                                                        class="dropdown-item">SOP Pelayanan Rekomtek SDA</a></li>
+                                                                <li><a href="{{ route('survey', 'perijinan') }}"
+                                                                        class="dropdown-item">SOP Tanggap Bencana</a></li>
+                                                            </ul>
+                                                        </li>
+                                                            <li class="dropdown-submenu"><a href="#" class="dropdown-item">E-PPID<i class="fas fa-chevron-down"></i></a>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a href="{{ route('survey', 'kinerja-balai') }}"
+                                                                        class="dropdown-item">e-PPID PUPR</a></li>
+                                                                <li><a href="{{ route('survey', 'perijinan') }}"
+                                                                        class="dropdown-item">e-PPID BWS KIV SMD</a></li>
+                                                            </ul>
+                                                        </li>
+{{-- 
                                                 @foreach ($links as $link)
                                                     <li> <a target="_blank" href="{{ $link->link }}"
                                                             class="dropdown-item">{{ $link->title }}</a></li>
-                                                @endforeach
+                                                @endforeach --}}
 
                                             </ul>
                                         </li>

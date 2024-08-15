@@ -9,7 +9,10 @@
                     Samarinda <br>JL. MT. Haryono No. 36, Kota Samarinda, Kalimantan Timur -
                     Indonesia - 75123 </span>
             </div>
-            <div class="col-md-2 mb-4 mb-lg-0">
+            <div class="col-md-2 mb-4 mb-lg-0 text-center">
+                <a title="free world map tracker" href="https://smallcounter.com/vmap/1721610734/">
+                    <img title="free world map counter" src="https://smallcounter.com/map/view.php?type=180&id=1721610734" border="1" alt="world map hits counter" /></a><br>
+                    <a href="https://smallcounter.com"></a>
                 <a href='https://www.free-counters.org/'></a>
                 <script type='text/javascript'
                     src='https://www.freevisitorcounters.com/auth.php?id=3d85f09c90f15841ee12e189f2fe276d6d1f3bd9'></script>
