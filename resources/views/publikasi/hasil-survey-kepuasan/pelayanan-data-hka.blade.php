@@ -2,7 +2,7 @@
 @section('content')
 
 
-<h3 class="text-center mt-4">Laporan Survey Kepuasan Tata Kelola nsfratruktur SDA</h3>
+<h3 class="text-center mt-4">Laporan Survey Kepuasan Pelayanan Data Hidrologi dan Kualitas Air</h3>
 <hr>
 <div class="container">
     <table class="table table-striped table-hover">

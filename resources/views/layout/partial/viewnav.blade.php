@@ -84,7 +84,7 @@
                                                 class="dropdown-item dropdown-toggle">KELEMBAGAAN<i
                                                     class="fas fa-chevron-down"></i></a>
                                             <ul class="dropdown-menu">
-                                                <li><a href="{{ route('page', 6) }}" class="dropdown-item">TKSPDA</a>
+                                                <li><a href="{{ route('tkpsda') }}" class="dropdown-item">TKSPDA</a>
                                                 </li>
                                                 <li><a href="{{ route('page', 7) }}" class="dropdown-item">KOMUNITAS
                                                         PEDULI

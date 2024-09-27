@@ -77,56 +77,56 @@ Route::get('/gnkpa', function () {
     return view('kelembagaan.gnkpa');
 })->name('gnkpa');
 
-//route Layanan dan Aplikasi
+//Aplikasi
 
 Route::get('/rekomtek', function () {
-    return view('layanan-aplikasi.rekomtek');
+    return view('aplikasi.rekomtek');
 })->name('rekomtek');
 
 
 Route::get('/hidrologi', function () {
-    return view('layanan-aplikasi.sisda.hidrologi');
+    return view('aplikasi.sisda.hidrologi');
 })->name('hidrologi');
 
 Route::get('/irwa', function () {
-    return view('layanan-aplikasi.sisda.irwa');
+    return view('aplikasi.sisda.irwa');
 })->name('irwa');
 
 Route::get('/bendungan-waduk', function () {
-    return view('layanan-aplikasi.sisda.bendungan-waduk');
+    return view('aplikasi.sisda.bendungan-waduk');
 })->name('bendungan-waduk');
 
 Route::get('/bendung', function () {
-    return view('layanan-aplikasi.sisda.bendung');
+    return view('aplikasi.sisda.bendung');
 })->name('bendung');
 
 Route::get('/sungai', function () {
-    return view('layanan-aplikasi.sisda.sungai');
+    return view('aplikasi.sisda.sungai');
 })->name('sungai');
 
 Route::get('/danau', function () {
-    return view('layanan-aplikasi.sisda.danau');
+    return view('aplikasi.sisda.danau');
 })->name('danau');
 
 Route::get('/sumur-dalam', function () {
-    return view('layanan-aplikasi.sisda.sumur-dalam');
+    return view('aplikasi.sisda.sumur-dalam');
 })->name('sumur-dalam');
 
 Route::get('/alokasi-air', function () {
-    return view('layanan-aplikasi.sisda.alokasi-air');
+    return view('aplikasi.sisda.alokasi-air');
 })->name('alokasi-air');
 
 
 Route::get('/webgis', function () {
-    return view('layanan-aplikasi.webgis');
+    return view('aplikasi.webgis');
 })->name('webgis');
 
 Route::get('/sih3', function () {
-    return view('layanan-aplikasi.sih3');
+    return view('aplikasi.sih3');
 })->name('sih3');
 
 Route::get('/laporan-bencana', function () {
-    return view('layanan-aplikasi.laporan-bencana');
+    return view('aplikasi.laporan-bencana');
 })->name('laporan-bencana');
 
 //route Publikasi
@@ -175,28 +175,20 @@ Route::get('/galery-video', function () {
 })->name('galery-video');
 
 
-Route::get('/kinerja-balai', function () {
-    return view('publikasi.hasil-survey-kepuasan.kinerja-balai');
-})->name('kinerja-balai');
+Route::get('/informasi-pengaduan', function () {
+    return view('publikasi.hasil-survey-kepuasan.pelayanan-informasi-dan-pengaduan');
+})->name('informasi-pengaduan');
+
+Route::get('/pelayanan-data-hka', function () {
+    return view('publikasi.hasil-survey-kepuasan.pelayanan-data-hka');
+})->name('pelayanan-data-hka');
 
 Route::get('/pelayanan-perijinan', function () {
     return view('publikasi.hasil-survey-kepuasan.pelayanan-perijinan');
 })->name('pelayanan-perijinan');
 
-Route::get('/pelayanan-data', function () {
-    return view('publikasi.hasil-survey-kepuasan.pelayanan-data');
-})->name('pelayanan-data');
-
-Route::get('/tata-kelola-infrastruktur', function () {
-    return view('publikasi.hasil-survey-kepuasan.tata-kelola-infrastruktur');
-})->name('tata-kelola-infrastruktur');
-
-Route::get('/layanan-barjas', function () {
-    return view('publikasi.hasil-survey-kepuasan.layanan-barjas');
-})->name('layanan-barjas');
-
-Route::get('/layanan-tanggap-darurat-pasca-bencana', function () {
-    return view('publikasi.hasil-survey-kepuasan.layanan-tanggap-darurat-pasca-bencana');
+Route::get('/pelayanan-tanggap-darurat-pasca-bencana', function () {
+    return view('publikasi.hasil-survey-kepuasan.pelayanan-tanggap-darurat-pasca-bencana');
 })->name('layanan-tanggap-darurat-pasca-bencana');
 
 
