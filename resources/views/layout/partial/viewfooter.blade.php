@@ -10,7 +10,7 @@
                     Indonesia - 75123 </span>
             </div>
             <div class="col-md-2 mb-4 mb-lg-0">
-                <a href='https://www.free-counters.org/'>www.Free-Counters.org</a>
+                <a href='https://www.free-counters.org/'></a>
                 <script type='text/javascript'
                     src='https://www.freevisitorcounters.com/auth.php?id=3d85f09c90f15841ee12e189f2fe276d6d1f3bd9'></script>
                 <script type="text/javascript"
