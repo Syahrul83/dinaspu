@@ -41,7 +41,7 @@ class KategorisTableSeeder extends Seeder
                 'title' => 'Kilas Informasi',
                 'active' => 1,
                 'created_at' => '2024-07-01 13:57:04',
-                'updated_at' => '2024-07-01 13:57:04',
+                'updated_at' => '2024-08-04 12:07:19',
             ),
         ));
         

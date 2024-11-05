@@ -9,7 +9,9 @@
 
     <div wire:ignore x-ignore ax-load
         ax-load-src="{{ \Filament\Support\Facades\FilamentAsset::getAlpineComponentSrc('tinyeditor', 'amidesfahani/filament-tinyeditor') }}"
-        x-load-css="[@js(\Filament\Support\Facades\FilamentAsset::getStyleHref('tiny-css', package: 'amidesfahani/filament-tinyeditor'))]" x-load-js="[@js(\Filament\Support\Facades\FilamentAsset::getScriptSrc($getLanguageId(), package: 'amidesfahani/filament-tinyeditor'))]" x-data="tinyeditor({
+        x-load-css="[@js(\Filament\Support\Facades\FilamentAsset::getStyleHref('tiny-css', package: 'amidesfahani/filament-tinyeditor'))]"
+        x-load-js="[@js(\Filament\Support\Facades\FilamentAsset::getScriptSrc($getLanguageId(), package: 'amidesfahani/filament-tinyeditor'))]"
+        x-data="tinyeditor({
             state: $wire.{{ $applyStateBindingModifiers("entangle('{$statePath}')", isOptimisticallyLive: false) }},
             statePath: '{{ $statePath }}',
             selector: '#{{ $textareaID }}',
@@ -21,22 +23,22 @@
             max_height: {{ $getMaxHeight() }},
             min_height: {{ $getMinHeight() }},
             @if (!filament()->hasDarkModeForced() && $darkMode() == 'media') skin: (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'oxide-dark' : 'oxide'),
-			content_css: (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default'),
-			@elseif(!filament()->hasDarkModeForced() && $darkMode() == 'class')
-			skin: (document.querySelector('html').getAttribute('class').includes('dark') ? 'oxide-dark' : 'oxide'),
-			content_css: (document.querySelector('html').getAttribute('class').includes('dark') ? 'dark' : 'default'),
-			@elseif(filament()->hasDarkModeForced() || $darkMode() == 'force')
-			skin: 'oxide-dark',
-			content_css: 'dark',
-			@elseif(!filament()->hasDarkModeForced() && $darkMode() == false)
-			skin: 'oxide',
-			content_css: 'default',
-			@elseif(!filament()->hasDarkModeForced() && $darkMode() == 'custom')
-			skin: '{{ $skinsUI() }}',
-			content_css: '{{ $skinsContent() }}',
-			@else
-			skin: ((localStorage.getItem('theme') ?? 'system') == 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)) ? 'oxide-dark' : 'oxide',
-			content_css: ((localStorage.getItem('theme') ?? 'system') == 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)) ? 'dark' : 'default', @endif
+                content_css: (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default'),
+            @elseif(!filament()->hasDarkModeForced() && $darkMode() == 'class')
+                skin: (document.querySelector('html').getAttribute('class').includes('dark') ? 'oxide-dark' : 'oxide'),
+                content_css: (document.querySelector('html').getAttribute('class').includes('dark') ? 'dark' : 'default'),
+            @elseif(filament()->hasDarkModeForced() || $darkMode() == 'force')
+                skin: 'oxide-dark',
+                content_css: 'dark',
+            @elseif(!filament()->hasDarkModeForced() && $darkMode() == false)
+                skin: 'oxide',
+                content_css: 'default',
+            @elseif(!filament()->hasDarkModeForced() && $darkMode() == 'custom')
+                skin: '{{ $skinsUI() }}',
+                content_css: '{{ $skinsContent() }}',
+            @else
+                skin: ((localStorage.getItem('theme') ?? 'system') == 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)) ? 'oxide-dark' : 'oxide',
+            content_css: ((localStorage.getItem('theme') ?? 'system') == 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)) ? 'dark' : 'default', @endif
             toolbar_sticky: {{ $getToolbarSticky() ? 'true' : 'false' }},
             templates: '{{ $getTemplates() }}',
             menubar: {{ $getShowMenuBar() ? 'true' : 'false' }},
