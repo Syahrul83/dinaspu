@@ -25,8 +25,8 @@ class AdminPanelProvider extends PanelProvider
     {
         return $panel
             ->default()
-            ->id('admin')
-            ->path('admin')
+            ->id('bwsadmin')
+            ->path('bwsadmin')
             ->brandName('BWS Kalimantan')
             ->favicon(asset('favicon_io/favicon.ico'))
             ->login()
