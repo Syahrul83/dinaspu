@@ -1,6 +1,6 @@
 @extends('layout.app')
 @section('content')
-    nanti baikin yg ini
+    <br>
     <div class="card">
         <div class="card-side bg-color-primary text-3 text-uppercase ">TKPSDA WS MAHAKAM</div>
         <div class="col-12 col-lg-12">

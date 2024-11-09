@@ -86,7 +86,7 @@
                                             <ul class="dropdown-menu">
                                                 <li><a href="{{ route('tkpsda') }}" class="dropdown-item">TKSPDA</a>
                                                 </li>
-                                                <li><a href="{{ route('page', 7) }}" class="dropdown-item">KOMUNITAS
+                                                <li><a href="{{ route('kmps') }}" class="dropdown-item">KOMUNITAS
                                                         PEDULI
                                                         SUNGAI</a></li>
                                                 <li><a href="{{ route('page', 8) }}" class="dropdown-item">KOMISI
