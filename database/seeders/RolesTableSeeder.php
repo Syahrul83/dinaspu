@@ -30,10 +30,10 @@ class RolesTableSeeder extends Seeder
             1 => 
             array (
                 'id' => 2,
-                'name' => 'Admin',
+                'name' => 'admin',
                 'guard_name' => 'web',
                 'created_at' => '2024-07-04 12:11:50',
-                'updated_at' => '2024-07-04 12:11:50',
+                'updated_at' => '2024-07-04 12:58:18',
             ),
             2 => 
             array (

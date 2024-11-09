@@ -23,25 +23,25 @@ class MenuLinksTableSeeder extends Seeder
             array (
                 'id' => 1,
                 'title' => 'L.A.P.O.R.!',
-                'link' => NULL,
+                'link' => 'https://www.lapor.go.id/',
                 'created_at' => '2024-07-01 14:06:50',
-                'updated_at' => '2024-07-01 14:06:50',
+                'updated_at' => '2024-08-05 15:29:03',
             ),
             1 => 
             array (
                 'id' => 2,
                 'title' => 'E-GRATIFIKASI',
-                'link' => NULL,
+                'link' => 'https://aplikasi.bandung.go.id/aplikasi/e-gratifikasi-2/',
                 'created_at' => '2024-07-01 14:07:48',
-                'updated_at' => '2024-07-01 14:07:48',
+                'updated_at' => '2024-07-11 20:37:51',
             ),
             2 => 
             array (
                 'id' => 3,
                 'title' => 'WISTELE BLOWING SISTEM',
-                'link' => NULL,
+                'link' => 'https://wbs.lkpp.go.id/',
                 'created_at' => '2024-07-01 14:08:14',
-                'updated_at' => '2024-07-01 14:08:14',
+                'updated_at' => '2024-07-11 20:38:39',
             ),
         ));
         

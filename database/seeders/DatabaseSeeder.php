@@ -34,5 +34,20 @@ class DatabaseSeeder extends Seeder
         $this->call(PostsTableSeeder::class);
         $this->call(FotosTableSeeder::class);
         $this->call(TugasTableSeeder::class);
+        $this->call(BanjirsTableSeeder::class);
+        $this->call(BukuDataTableSeeder::class);
+        $this->call(HeadersTableSeeder::class);
+        $this->call(InfografisTableSeeder::class);
+        $this->call(KekeringansTableSeeder::class);
+        $this->call(KinerjaBalaisTableSeeder::class);
+        $this->call(MajalahPesutsTableSeeder::class);
+        $this->call(MenuItemsTableSeeder::class);
+        $this->call(PelayananBencanasTableSeeder::class);
+        $this->call(PelayananDataTableSeeder::class);
+        $this->call(PelayananPegadaansTableSeeder::class);
+        $this->call(PelayananPerijinansTableSeeder::class);
+        $this->call(PelayananSdasTableSeeder::class);
+        $this->call(PublikasiHidrologisTableSeeder::class);
+        $this->call(VideosTableSeeder::class);
     }
 }

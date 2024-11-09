@@ -16,9 +16,9 @@ class PostsTableSeeder extends Seeder
     {
         
 
-        \DB::table('Posts')->delete();
+        \DB::table('posts')->delete();
         
-        \DB::table('Posts')->insert(array (
+        \DB::table('posts')->insert(array (
             0 => 
             array (
                 'id' => 1,
@@ -51,117 +51,104 @@ class PostsTableSeeder extends Seeder
             2 => 
             array (
                 'id' => 4,
-                'title' => 'Mongolia',
-            'body' => '<p><strong>Mongolia</strong><sup id="cite_ref-11" class="reference"><a href="https://en.wikipedia.org/wiki/Mongolia#cite_note-11">[b]</a></sup>&nbsp;is a&nbsp;<a title="Landlocked country" href="https://en.wikipedia.org/wiki/Landlocked_country">landlocked country</a>&nbsp;in&nbsp;<a title="East Asia" href="https://en.wikipedia.org/wiki/East_Asia">East Asia</a>, bordered by&nbsp;<a title="Russia" href="https://en.wikipedia.org/wiki/Russia">Russia</a>&nbsp;to the north and&nbsp;<a title="China" href="https://en.wikipedia.org/wiki/China">China</a>&nbsp;to the south. It covers an area of 1,564,116 square kilometres (603,909 square miles), with a population of just 3.3 million, making it the world\'s&nbsp;<a title="List of countries and dependencies by population density" href="https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population_density">most sparsely populated sovereign state</a>. Mongolia is the world\'s largest landlocked country that does not border a&nbsp;<a title="Endorheic basin" href="https://en.wikipedia.org/wiki/Endorheic_basin">closed sea</a>, and much of its area is covered by grassy&nbsp;<a title="Steppe" href="https://en.wikipedia.org/wiki/Steppe">steppe</a>, with mountains to the north and west and the&nbsp;<a title="Gobi Desert" href="https://en.wikipedia.org/wiki/Gobi_Desert">Gobi Desert</a>&nbsp;to the south.&nbsp;<a title="Ulaanbaatar" href="https://en.wikipedia.org/wiki/Ulaanbaatar">Ulaanbaatar</a>, the capital and&nbsp;<a title="List of cities in Mongolia" href="https://en.wikipedia.org/wiki/List_of_cities_in_Mongolia">largest city</a>, is home to roughly half of the country\'s population.</p>
-<p>The territory of modern-day Mongolia has been ruled by various&nbsp;<a title="Nomadic empire" href="https://en.wikipedia.org/wiki/Nomadic_empire">nomadic empires</a>, including the&nbsp;<a title="Xiongnu" href="https://en.wikipedia.org/wiki/Xiongnu">Xiongnu</a>, the&nbsp;<a title="Xianbei" href="https://en.wikipedia.org/wiki/Xianbei">Xianbei</a>, the&nbsp;<a class="mw-redirect" title="Rouran" href="https://en.wikipedia.org/wiki/Rouran">Rouran</a>, the&nbsp;<a title="First Turkic Khaganate" href="https://en.wikipedia.org/wiki/First_Turkic_Khaganate">First Turkic Khaganate</a>, the&nbsp;<a title="Second Turkic Khaganate" href="https://en.wikipedia.org/wiki/Second_Turkic_Khaganate">Second Turkic Khaganate</a>, the&nbsp;<a title="Uyghur Khaganate" href="https://en.wikipedia.org/wiki/Uyghur_Khaganate">Uyghur Khaganate</a>&nbsp;and others. In 1206,&nbsp;<a title="Genghis Khan" href="https://en.wikipedia.org/wiki/Genghis_Khan">Genghis Khan</a>&nbsp;founded the&nbsp;<a title="Mongol Empire" href="https://en.wikipedia.org/wiki/Mongol_Empire">Mongol Empire</a>, which became the largest&nbsp;<a title="List of largest empires" href="https://en.wikipedia.org/wiki/List_of_largest_empires">contiguous land empire</a>&nbsp;in history. His grandson&nbsp;<a title="Kublai Khan" href="https://en.wikipedia.org/wiki/Kublai_Khan">Kublai Khan</a>&nbsp;conquered&nbsp;<a title="China proper" href="https://en.wikipedia.org/wiki/China_proper">China proper</a>&nbsp;and established the&nbsp;<a title="Yuan dynasty" href="https://en.wikipedia.org/wiki/Yuan_dynasty">Yuan dynasty</a>. After the collapse of the Yuan, the&nbsp;<a title="Mongols" href="https://en.wikipedia.org/wiki/Mongols">Mongols</a>&nbsp;retreated to Mongolia and resumed their earlier pattern of factional conflict, except during the era of&nbsp;<a title="Dayan Khan" href="https://en.wikipedia.org/wiki/Dayan_Khan">Dayan Khan</a>&nbsp;and&nbsp;<a class="mw-redirect" title="Tumen Zasagt Khan" href="https://en.wikipedia.org/wiki/Tumen_Zasagt_Khan">Tumen Zasagt Khan</a>. In the 16th century,&nbsp;<a title="Buddhism in Mongolia" href="https://en.wikipedia.org/wiki/Buddhism_in_Mongolia">Tibetan Buddhism</a>&nbsp;spread to Mongolia, being further led by the&nbsp;<a title="Manchu people" href="https://en.wikipedia.org/wiki/Manchu_people">Manchu</a>-founded&nbsp;<a title="Qing dynasty" href="https://en.wikipedia.org/wiki/Qing_dynasty">Qing dynasty</a>, which absorbed the country in the 17th century. By the early 20th century, almost one-third of the adult male population were Buddhist monks.<sup id="cite_ref-12" class="reference"><a href="https://en.wikipedia.org/wiki/Mongolia#cite_note-12">[10]</a></sup><sup id="cite_ref-13" class="reference"><a href="https://en.wikipedia.org/wiki/Mongolia#cite_note-13">[11]</a></sup>&nbsp;After the collapse of the Qing dynasty in 1911, Mongolia&nbsp;<a title="Mongolian Revolution of 1911" href="https://en.wikipedia.org/wiki/Mongolian_Revolution_of_1911">declared independence</a>, and achieved actual&nbsp;<a title="Mongolian Revolution of 1921" href="https://en.wikipedia.org/wiki/Mongolian_Revolution_of_1921">independence from the Republic of China</a>&nbsp;in 1921. Shortly thereafter, the country became a&nbsp;<a title="Satellite state" href="https://en.wikipedia.org/wiki/Satellite_state">satellite state</a>&nbsp;of the&nbsp;<a title="Soviet Union" href="https://en.wikipedia.org/wiki/Soviet_Union">Soviet Union</a>. In 1924, the&nbsp;<a title="Mongolian People\'s Republic" href="https://en.wikipedia.org/wiki/Mongolian_People%27s_Republic">Mongolian People\'s Republic</a>&nbsp;was founded as a&nbsp;<a title="Socialist state" href="https://en.wikipedia.org/wiki/Socialist_state">socialist state</a>.<sup id="cite_ref-Sik_14-0" class="reference"><a href="https://en.wikipedia.org/wiki/Mongolia#cite_note-Sik-14">[12]</a></sup>&nbsp;After the anti-communist&nbsp;<a title="Revolutions of 1989" href="https://en.wikipedia.org/wiki/Revolutions_of_1989">revolutions of 1989</a>, Mongolia conducted its own peaceful&nbsp;<a class="mw-redirect" title="1990 Democratic Revolution in Mongolia" href="https://en.wikipedia.org/wiki/1990_Democratic_Revolution_in_Mongolia">democratic revolution</a>&nbsp;in early 1990. This led to a&nbsp;<a title="Multi-party system" href="https://en.wikipedia.org/wiki/Multi-party_system">multi-party system</a>, a new&nbsp;<a title="Constitution of Mongolia" href="https://en.wikipedia.org/wiki/Constitution_of_Mongolia">constitution of 1992</a>, and transition to a&nbsp;<a title="Market economy" href="https://en.wikipedia.org/wiki/Market_economy">market economy</a>.</p>
-<p>Approximately 30% of the population is nomadic or semi-nomadic;&nbsp;<a title="Horse culture in Mongolia" href="https://en.wikipedia.org/wiki/Horse_culture_in_Mongolia">horse culture</a>&nbsp;remains integral.&nbsp;<a title="Buddhism" href="https://en.wikipedia.org/wiki/Buddhism">Buddhism</a>&nbsp;is the majority religion (51.7%), with the nonreligious being the second-largest group (40.6%).&nbsp;<a title="Islam" href="https://en.wikipedia.org/wiki/Islam">Islam</a>&nbsp;is the third-largest religious identification (3.2%), concentrated among ethnic&nbsp;<a title="Kazakhs" href="https://en.wikipedia.org/wiki/Kazakhs">Kazakhs</a>. The vast majority of citizens are ethnic Mongols, with roughly 5% of the population being&nbsp;<a title="Kazakhs" href="https://en.wikipedia.org/wiki/Kazakhs">Kazakhs</a>,&nbsp;<a title="Tuvans" href="https://en.wikipedia.org/wiki/Tuvans">Tuvans</a>, and other ethnic minorities, who are especially concentrated in the western regions. Mongolia is a member of the&nbsp;<a title="United Nations" href="https://en.wikipedia.org/wiki/United_Nations">United Nations</a>,&nbsp;<a title="Asia Cooperation Dialogue" href="https://en.wikipedia.org/wiki/Asia_Cooperation_Dialogue">Asia Cooperation Dialogue</a>,&nbsp;<a title="Group of 77" href="https://en.wikipedia.org/wiki/Group_of_77">G77</a>,&nbsp;<a title="Asian Infrastructure Investment Bank" href="https://en.wikipedia.org/wiki/Asian_Infrastructure_Investment_Bank">Asian Infrastructure Investment Bank</a>,&nbsp;<a title="Non-Aligned Movement" href="https://en.wikipedia.org/wiki/Non-Aligned_Movement">Non-Aligned Movement</a>&nbsp;and a&nbsp;<a title="Foreign relations of NATO" href="https://en.wikipedia.org/wiki/Foreign_relations_of_NATO#Mongolia">NATO global partner</a>. Mongolia joined the&nbsp;<a title="World Trade Organization" href="https://en.wikipedia.org/wiki/World_Trade_Organization">World Trade Organization</a>&nbsp;in 1997 and seeks to expand its participation in regional economic and trade groups.<sup id="cite_ref-cia_5-1" class="reference"><a href="https://en.wikipedia.org/wiki/Mongolia#cite_note-cia-5">[4]</a></sup></p>',
-                'image' => 'post/01J2AWNQ7AQ9QDS4H6FKD5PQF5.jpg',
+                'title' => 'Zona Integritas BWS Kalimantan IV Samarinda',
+                'body' => '<p><strong>Zona Integritas BWS Kalimantan IV Samarinda</strong></p>',
+                'image' => 'post/01J40TMZSVGW801GN1BT6RBNPB.jpg',
                 'kategori_id' => '2',
                 'user_id' => '1',
                 'status' => 'publish',
                 'created_at' => '2024-07-09 12:40:18',
-                'updated_at' => '2024-07-09 12:40:18',
+                'updated_at' => '2024-07-30 14:16:30',
             ),
             3 => 
             array (
                 'id' => 5,
-                'title' => 'Nvidia RTX',
-            'body' => '<p><strong>Nvidia RTX</strong>&nbsp;(also known as&nbsp;<strong>Nvidia GeForce RTX</strong>&nbsp;under the&nbsp;<a title="GeForce" href="https://en.wikipedia.org/wiki/GeForce">GeForce</a>&nbsp;brand) is a professional visual computing platform created by&nbsp;<a title="Nvidia" href="https://en.wikipedia.org/wiki/Nvidia">Nvidia</a>, primarily used in&nbsp;<a title="Workstation" href="https://en.wikipedia.org/wiki/Workstation">workstations</a>&nbsp;for designing complex large-scale models in architecture and product design, scientific visualization, energy exploration, and film and video production, as well as being used in&nbsp;<a title="Personal computer" href="https://en.wikipedia.org/wiki/Personal_computer">mainstream PCs</a>&nbsp;for gaming.</p>
-<p>Nvidia RTX features&nbsp;<a title="Ray-tracing hardware" href="https://en.wikipedia.org/wiki/Ray-tracing_hardware">hardware</a>-enabled&nbsp;<a class="mw-redirect" title="Real-time ray tracing" href="https://en.wikipedia.org/wiki/Real-time_ray_tracing">real-time ray tracing</a>. Historically, ray tracing had been reserved to non-<a title="Real-time computer graphics" href="https://en.wikipedia.org/wiki/Real-time_computer_graphics">real time</a>&nbsp;applications (like&nbsp;<a title="Computer-generated imagery" href="https://en.wikipedia.org/wiki/Computer-generated_imagery">CGI</a>&nbsp;in visual effects for movies and in photorealistic renderings), with video games having to rely on&nbsp;<a title="Shader" href="https://en.wikipedia.org/wiki/Shader#Pixel_shaders">direct lighting</a>&nbsp;and&nbsp;<a title="Global illumination" href="https://en.wikipedia.org/wiki/Global_illumination">precalculated indirect contribution</a>&nbsp;for their rendering. RTX facilitates a new development in computer graphics of generating interactive images that react to lighting, shadows and reflections.<sup id="cite_ref-1" class="reference"><a href="https://en.wikipedia.org/wiki/Nvidia_RTX#cite_note-1">[1]</a></sup>&nbsp;RTX runs on Nvidia&nbsp;<a title="Volta (microarchitecture)" href="https://en.wikipedia.org/wiki/Volta_(microarchitecture)">Volta</a>-,&nbsp;<a title="Turing (microarchitecture)" href="https://en.wikipedia.org/wiki/Turing_(microarchitecture)">Turing</a>-,&nbsp;<a title="Ampere (microarchitecture)" href="https://en.wikipedia.org/wiki/Ampere_(microarchitecture)">Ampere</a>- and&nbsp;<a title="Ada Lovelace (microarchitecture)" href="https://en.wikipedia.org/wiki/Ada_Lovelace_(microarchitecture)">Ada Lovelace</a>-based&nbsp;<a class="mw-redirect" title="GPU" href="https://en.wikipedia.org/wiki/GPU">GPUs</a>, specifically utilizing the Tensor cores (and new RT cores on Turing and successors) on the architectures for ray-tracing acceleration.<sup id="cite_ref-Forbes2018_2-0" class="reference"><a href="https://en.wikipedia.org/wiki/Nvidia_RTX#cite_note-Forbes2018-2">[2]</a></sup><sup id="cite_ref-3" class="reference"><a href="https://en.wikipedia.org/wiki/Nvidia_RTX#cite_note-3">[3]</a></sup><sup id="cite_ref-4" class="reference"><a href="https://en.wikipedia.org/wiki/Nvidia_RTX#cite_note-4">[4]</a></sup></p>
-<p>In March 2019, Nvidia announced that selected&nbsp;<a title="GeForce 10 series" href="https://en.wikipedia.org/wiki/GeForce_10_series">GTX 10 series</a>&nbsp;(<a title="Pascal (microarchitecture)" href="https://en.wikipedia.org/wiki/Pascal_(microarchitecture)">Pascal</a>) and&nbsp;<a title="GeForce 16 series" href="https://en.wikipedia.org/wiki/GeForce_16_series">GTX 16 series</a>&nbsp;(<a title="Turing (microarchitecture)" href="https://en.wikipedia.org/wiki/Turing_(microarchitecture)">Turing</a>) cards would receive support for subsets of RTX technology in upcoming drivers, although functions and performance will be affected by their lack of dedicated hardware cores for ray tracing.<sup id="cite_ref-5" class="reference"><a href="https://en.wikipedia.org/wiki/Nvidia_RTX#cite_note-5">[5]</a></sup></p>
-<p>In October 2020, Nvidia announced Nvidia&nbsp;RTX A6000 as the first Ampere-architecture-based graphics card for use in professional workstations in the Nvidia RTX product line, replacing the former&nbsp;<a title="Quadro" href="https://en.wikipedia.org/wiki/Quadro">Quadro</a>&nbsp;product line of professional graphics cards.<sup id="cite_ref-6" class="reference"><a href="https://en.wikipedia.org/wiki/Nvidia_RTX#cite_note-6">[6]</a></sup></p>
-<p>Nvidia worked with&nbsp;<a title="Microsoft" href="https://en.wikipedia.org/wiki/Microsoft">Microsoft</a>&nbsp;to integrate RTX support with Microsoft\'s&nbsp;<a title="DirectX Raytracing" href="https://en.wikipedia.org/wiki/DirectX_Raytracing">DirectX Raytracing</a>&nbsp;API (DXR). RTX is currently available through Nvidia&nbsp;<a title="OptiX" href="https://en.wikipedia.org/wiki/OptiX">OptiX</a>&nbsp;and for&nbsp;<a title="DirectX" href="https://en.wikipedia.org/wiki/DirectX">DirectX</a>. For the Turing and Ampere architectures, it is also available for&nbsp;<a class="mw-redirect" title="Vulkan (API)" href="https://en.wikipedia.org/wiki/Vulkan_(API)">Vulkan</a>.<sup id="cite_ref-7" class="reference"><a href="https://en.wikipedia.org/wiki/Nvidia_RTX#cite_note-7">[7]</a></sup></p>',
-                'image' => NULL,
+                'title' => 'Pengumuman Hasil Wawancara TPM P3-TGAI TA.2024',
+            'body' => '<p>Pengumuman Hasil Wawancara Tenaga Pendamping Masyarakat (TPM) P3-TGAI, BWS Kalimantan IV Samarinda Tahun Anggaran 2024</p>
+<p>Bagi peserta yang lolos pada tahap tes tertulis online dan mengikuti Jadwal Wawancara dapat dilihat pada link:<br>https://bit.ly/Pengumuman_Hasil_Wawancara_P3TGAI</p>
+<p>Sehubungan dengan telah dilaksanakan seleksi wawancara secara online pada hari Rabu, 22 Juni 2024 pukul 10.00 wita s/d selesai. Didapatkan nilai sebagaimana terlampir dan hasil penilaian wawancara bersifat final. Maka kami sampaikan kepada bapak/ibu peserta yang nilainya dari urutan tertinggi 1 (satu) sampai 5 (lima), berhak untuk mengadakan penandatanganan surat perjanjian kerja (SPK) dan pelatihan TPM yang akan dilaksanakan pada :</p>
+<p>Hari : Senin, 29 Juli 2024<br>Waktu : Pukul 09:00 Wita s/d Selesai<br>Alamat : Ruang Rapat Mahakam Lantai 1 Gedung Utama Kantor Balai Wilayah Sungai Kalimantan IV Samarinda (Jl. MT. Haryono No. 36 Samarinda)<br>Pakaian : Kemeja Putih dan Celana/Rok Hitam (berbahan kain)</p>
+<p>&nbsp;</p>',
+                'image' => 'post/01J414EW2QN3GX7RP9TQCFC6WZ.jpg',
                 'kategori_id' => '3',
                 'user_id' => '1',
                 'status' => 'publish',
                 'created_at' => '2024-07-09 12:51:01',
-                'updated_at' => '2024-07-09 12:52:21',
+                'updated_at' => '2024-07-30 14:15:21',
             ),
             4 => 
             array (
-                'id' => 6,
-                'title' => 'The standard Lorem Ipsum passage, used since the 1500s',
-                'body' => '<h3>The standard Lorem Ipsum passage, used since the 1500s</h3>
-<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-<h3>Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</h3>
-<p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
-<h3>1914 translation by H. Rackham</h3>
-<p>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"</p>',
-                'image' => 'post/01J2B1SF8XW6ECEYTSWTSRVT3D.jpg',
-                'kategori_id' => '1',
-                'user_id' => '1',
-                'status' => 'publish',
-                'created_at' => '2024-07-09 14:09:44',
-                'updated_at' => '2024-07-09 14:10:36',
-            ),
-            5 => 
-            array (
-                'id' => 7,
-                'title' => 'The standard Lorem Ipsum',
-                'body' => '<h3>The standard Lorem Ipsum passage, used since the 1500s</h3>
-<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-<h3>Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</h3>
-<p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
-<h3>1914 translation by H. Rackham</h3>
-<p>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"</p>',
-                'image' => 'post/01J2B1TRQ08EH2646TEG07VSA7.jpg',
-                'kategori_id' => '1',
-                'user_id' => '1',
-                'status' => 'publish',
-                'created_at' => '2024-07-09 14:10:26',
-                'updated_at' => '2024-07-09 14:10:26',
-            ),
-            6 => 
-            array (
                 'id' => 8,
-                'title' => 'Section 1.10.32 of ',
-                'body' => '<h3>The standard Lorem Ipsum passage, used since the 1500s</h3>
-<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-<h3>Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</h3>
-<p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
-<h3>1914 translation by H. Rackham</h3>
-<p>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"</p>',
-                'image' => 'post/01J2B1WM1J8QPRZ2ZWX7DHN65D.jpg',
+                'title' => 'Sidang Pleno Ke-II TKPSDA WS. Mahakam',
+            'body' => '<p>Balai Wilayah Sungai Kalimantan IV Samarinda menggelar sidang Pleno ke-II, Tim Kordinasi Pengelolaan Sumber Daya Air (TKPSDA) Wilayah Sungai Mahakam, kegiatan ini dilangsungkan mulai 11-14 Juni 2024 melalui tatap muka dan daring. bertempat di Astara Hotel, Kota Balikpapan.</p>
+<p>.</p>
+<p>&nbsp;</p>',
+                'image' => 'post/01J40XMFQ0VJYQHMMH4KAMJV4V.jpg',
                 'kategori_id' => '1',
                 'user_id' => '1',
                 'status' => 'publish',
                 'created_at' => '2024-07-09 14:11:27',
-                'updated_at' => '2024-07-09 14:11:27',
+                'updated_at' => '2024-07-30 12:16:05',
             ),
-            7 => 
+            5 => 
             array (
                 'id' => 9,
-                'title' => '1914 translation',
-                'body' => '<h3>The standard Lorem Ipsum passage, used since the 1500s</h3>
-<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-<h3>Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</h3>
-<p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
-<h3>1914 translation by H. Rackham</h3>
-<p>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"</p>',
-                'image' => 'post/01J2B1Y9GG620P55KV23ABJG01.jpg',
+                'title' => 'Koordinasi Penerapan MR Triwulan III & Evaluasi Anggaran Tahun 2024',
+                'body' => '<p>Menindaklanjuti hasil Rapat Monitoring dan Evaluasi Anggaran Penerapan Kepatuhan Internal dan Manajemen Risiko Ditjen SDA Tahun 2024 pada tanggal 12 Juli 2024, Balai Wilayah Sungai Kalimantan IV Samarinda melakukan Rapat Koordinasi Pemantauan Pelaksanaan Penerapan Manajemen Risiko Triwulan III, Monitoring dan Evaluasi Penggunaan Anggaran Manajemen Risiko &Tau;&Alpha; 2024</p>',
+                'image' => 'post/01J40Y7N71HFGF0ZCFVSQ4K6WJ.jpg',
                 'kategori_id' => '1',
                 'user_id' => '1',
                 'status' => 'publish',
                 'created_at' => '2024-07-09 14:12:22',
-                'updated_at' => '2024-07-09 14:12:22',
+                'updated_at' => '2024-07-30 12:26:34',
             ),
-            8 => 
+            6 => 
             array (
                 'id' => 10,
-                'title' => 'Bonorum et Malorum',
-                'body' => '<h3>The standard Lorem Ipsum passage, used since the 1500s</h3>
-<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-<h3>Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</h3>
-<p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
-<h3>1914 translation by H. Rackham</h3>
-<p>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"</p>',
-                'image' => 'post/01J2B2035H63ATHP7GKF7V3ZB7.jpg',
+            'title' => 'Kunjungan Pak Jokowi ke Embung MBH (IKN)',
+            'body' => '<p>Presiden Joko Widodo melakukan kunjungan ke Embung MBH pada 28 Juli 2024. Embung MBH merupakan salah satu dari 19 embung yang dibangun di Kawasan Inti Pusat Pemerintahan (KIPP) IKN untuk mewujudkan konsep sponge city.</p>',
+                'image' => 'post/01J413BVYS5C6AHDKWXD500Y2R.jpg',
                 'kategori_id' => '1',
                 'user_id' => '1',
                 'status' => 'publish',
                 'created_at' => '2024-07-09 14:13:21',
-                'updated_at' => '2024-07-09 14:13:21',
+                'updated_at' => '2024-07-30 13:56:14',
+            ),
+            7 => 
+            array (
+                'id' => 11,
+                'title' => 'Direktur Jenderal SDA Meninjau Kesiapan Infrastruktur IKN',
+                'body' => '<p>Senin 29 Juli 2024, Direktur Jenderal Sumber Daya Air Kementerian PUPR, Ir. Bob Arthur Lombogia, M.Si melakukan kunjungan kerja guna meninjau kesiapan Infrastruktrur SDA dalam rangka mendukung kelancaran Peringatan Hari Kemerdekaan 17 Agustus 2024 yang rencananya akan di laksanakan di Ibu Kota Nusantara</p>',
+                'image' => 'post/01J413HP2HG945X82JSDEQFHSA.jpg',
+                'kategori_id' => '1',
+                'user_id' => '1',
+                'status' => 'publish',
+                'created_at' => '2024-07-20 15:55:30',
+                'updated_at' => '2024-07-30 13:59:25',
+            ),
+            8 => 
+            array (
+                'id' => 12,
+            'title' => 'Kunjungan Presiden RI dan Wakil Presiden ke Embung MBH (IKN)',
+            'body' => '<p>Senin 12 Agustus 2024, Menteri Pekerjaan Umum dan Perumahan Rakyat (PUPR) Basuki Hadimuljono mendampingi Presiden Joko Widodo dan Wakil Presiden K.H. Ma&rsquo;ruf Amin beserta seluruh jajaran Menteri Kabinet Indonesia Maju mengunjungi Embung MBH yang terletak di Kawasan Inti Pusat Pemerintahan IKN untuk menikmati udara pagi yang bersih serta &nbsp;meninjau persiapan Peringatan Hari Kemerdekaan RI ke-79 yang akan diselenggarakan di IKN.</p>',
+                'image' => 'post/01J57VQKCEMBPVBZSTCAJXE4W4.jpg',
+                'kategori_id' => '1',
+                'user_id' => '1',
+                'status' => 'publish',
+                'created_at' => '2024-08-14 15:13:13',
+                'updated_at' => '2024-08-14 15:13:13',
+            ),
+            9 => 
+            array (
+                'id' => 13,
+            'title' => 'Kepala Daerah Seluruh Indonesia berkunjung ke Embung MBH (IKN)',
+            'body' => '<p>Selasa 13 Agustus 2024 sebelum menghadiri acara pengarahan oleh Presiden Republik Indonesia di Istana Garuda, Menteri Dalam Negeri beserta dengan Kepala Daerah Seluruh Indonesia berkunjung ke Embung MBH didampingi Menteri PUPR sekaligus Plt Kepala Otorita Ibu Kota Nusantara (OIKN) Basuki Hadimuljono untuk melihat pembangunan infrastruktur IKN serta menikmati udara segar pagi hari di IKN.</p>',
+                'image' => 'post/01J57VVW2J5EZEKNTMFBX7R883.jpg',
+                'kategori_id' => '1',
+                'user_id' => '1',
+                'status' => 'publish',
+                'created_at' => '2024-08-14 15:15:33',
+                'updated_at' => '2024-08-14 15:15:33',
             ),
         ));
         
