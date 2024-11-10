@@ -52,14 +52,14 @@
                                                         <div class="row">
                                                             <div class="col-auto pe-0">
                                                                 @php
-                                                                    $date = $post->created_at->format('d');
+                                                                    $date = $post->tanggal->format('d');
 
                                                                 @endphp
                                                                 <div class="date">
                                                                     <span
-                                                                        class="day font-weight-extra-bold border">{{  $post->created_at->format('d') }}</span>
+                                                                        class="day font-weight-extra-bold border">{{  $post->tanggal->format('d') }}</span>
                                                                     <span
-                                                                        class="month text-2 text-uppercase">{{  $post->created_at->format('M') }}</span>
+                                                                        class="month text-2 text-uppercase">{{  $post->tanggal->format('M') }}</span>
                                                                 </div>
                                                             </div>
                                                             <div class="col ps-1">

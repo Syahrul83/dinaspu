@@ -10,7 +10,9 @@ class Post extends Model
     use HasFactory;
     protected $guarded = ['id'];
 
-
+    protected $casts = [
+        'tanggal' => 'datetime',
+    ];
 
     public function user()
     {

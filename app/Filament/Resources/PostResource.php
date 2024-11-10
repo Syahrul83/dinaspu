@@ -86,6 +86,10 @@ class PostResource extends Resource
                                         'publish' => 'Publish',
 
                                     ]),
+
+                                Forms\Components\DatePicker::make('tanggal')
+                                    ->label('Tanggal Publish')
+                                    ->default(now()),
                             ]),
                     ])
                     ->columnSpan(['lg' => 1]),
@@ -112,14 +116,11 @@ class PostResource extends Resource
                         'draft' => 'Draft',
                         'publish' => 'Publish',
                     ])->searchable(),
-                Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
+                Tables\Columns\TextColumn::make('tanggal')
+                    ->date()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+
             ])->defaultSort('id', 'desc')
             ->filters([
                 //
