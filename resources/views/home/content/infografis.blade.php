@@ -20,10 +20,7 @@
                             <div class="testimonial-arrow-down"></div>
                             <div class="testimonial-author">
                                 <p>
-                                    <a href="{{$info->link}}"><strong>Profil
-                                            DI Premium yang Mendapatkan Layanan
-                                            dari Pembangunan Bendungan Periode
-                                            2015-2025</strong></a>
+                                    <strong>{{ $info->title }}</strong>
                                 </p>
                             </div>
                         </div>

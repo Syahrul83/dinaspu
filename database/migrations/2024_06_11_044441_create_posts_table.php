@@ -18,6 +18,7 @@ return new class extends Migration {
             $table->string('kategori_id')->nullable();
             $table->string('user_id');
             $table->enum('status', ['publish', 'draft'])->default('draft');
+            $table->date('tanggal')->nullable();
             $table->timestamps();
         });
     }
