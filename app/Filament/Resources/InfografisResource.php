@@ -34,8 +34,10 @@ class InfografisResource extends Resource
                 Forms\Components\TextInput::make('title')->required(),
                 Forms\Components\FileUpload::make('image')
                     ->image()
+                    ->required()
                     ->directory('slider-infografis')
-                    ->maxSize(2024),
+                    ->helperText('Tidak Boleh Lebih dari 1MB')
+                    ->maxSize(1024),
 
                 Forms\Components\TextInput::make('link'),
             ]);

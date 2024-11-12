@@ -36,7 +36,9 @@ class HeaderResource extends Resource
                 Forms\Components\FileUpload::make('image')
                     ->image()
                     ->directory('web-header')
-                    ->maxSize(2024),
+                    ->required()
+                    ->helperText('Tidak Boleh Lebih dari 1MB')
+                    ->maxSize(1024),
             ]);
     }
 
