@@ -17,6 +17,7 @@ use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
+use Datlechin\FilamentMenuBuilder\FilamentMenuBuilderPlugin;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 
 class AdminPanelProvider extends PanelProvider
@@ -83,7 +84,10 @@ class AdminPanelProvider extends PanelProvider
             //     'Settings',
             // ])
             ->plugins([
-                \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make()
+                \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make(),
+                FilamentMenuBuilderPlugin::make()
+                    ->addLocation('header', 'Header')
+                    ->addLocation('footer', 'Footer')
             ])
             ->authMiddleware([
                 Authenticate::class,

@@ -176,11 +176,11 @@ class HalamenTableSeeder extends Seeder
                 'title' => 'Rekomtek SDA',
                 'slug' => NULL,
                 'body' => NULL,
-                'image' => NULL,
+                'image' => 'halaman/01JCJVCZ305SDBJRW0KJ7VEXHG.jpg',
                 'user_id' => '1',
                 'active' => 1,
                 'created_at' => '2024-06-30 14:01:15',
-                'updated_at' => '2024-06-30 14:01:15',
+                'updated_at' => '2024-11-13 21:28:56',
             ),
             11 => 
             array (
@@ -272,11 +272,11 @@ class HalamenTableSeeder extends Seeder
                 'title' => 'Informasi Alokasi Air',
                 'slug' => NULL,
                 'body' => NULL,
-                'image' => NULL,
+                'image' => 'halaman/01JCJW25BRKEKWCCZS9BE9VKW8.jpg',
                 'user_id' => '1',
                 'active' => 1,
                 'created_at' => '2024-06-30 14:03:55',
-                'updated_at' => '2024-06-30 14:03:55',
+                'updated_at' => '2024-11-13 21:40:31',
             ),
             19 => 
             array (
@@ -284,11 +284,11 @@ class HalamenTableSeeder extends Seeder
                 'title' => 'WebGIS BWS KIV-SMD',
                 'slug' => NULL,
                 'body' => NULL,
-                'image' => NULL,
+                'image' => 'halaman/01JCJVZMNN1X3ER0TMB8CSRCJ0.jpg',
                 'user_id' => '1',
                 'active' => 1,
                 'created_at' => '2024-06-30 14:04:32',
-                'updated_at' => '2024-06-30 14:04:32',
+                'updated_at' => '2024-11-13 21:39:08',
             ),
             20 => 
             array (
@@ -305,14 +305,14 @@ class HalamenTableSeeder extends Seeder
             21 => 
             array (
                 'id' => 22,
-                'title' => 'Laporan Bencana',
+                'title' => 'Laporan Bencana BWS KIV SMD',
                 'slug' => NULL,
                 'body' => NULL,
-                'image' => NULL,
+                'image' => 'halaman/01JCJX08T47JAVCK4VEWJPKXYF.jpg',
                 'user_id' => '1',
                 'active' => 1,
                 'created_at' => '2024-06-30 14:05:09',
-                'updated_at' => '2024-06-30 14:05:09',
+                'updated_at' => '2024-11-13 21:56:57',
             ),
             22 => 
             array (

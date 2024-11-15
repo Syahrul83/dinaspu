@@ -187,7 +187,7 @@
                                                             class="dropdown-item">Laporan Kinerja BWS KIV SMD</a></li>
                                                 </ul>
                                             </li>
-                                                <li class="dropdown-submenu"><a href="#" class="dropdown-item">Informasi 
+                                                <li class="dropdown-submenu"><a href="#" class="dropdown-item">Informasi
                                                         Satgas Bencana SDA<i class="fas fa-chevron-down"></i></a>
                                                     <ul class="dropdown-menu">
                                                         <li><a href="{{ route('lapSatgas', 'banjir') }}"
@@ -240,7 +240,7 @@
                                                     class="fas fa-chevron-down"></i></a>
                                             <ul class="dropdown-menu">
                                                     <li><a href="{{ route('page', 1) }}" class="dropdown-item">Layanan Terpadu</a>
-                                                    </li>                                                    
+                                                    </li>
                                                             <li class="dropdown-submenu"><a href="#" class="dropdown-item">Pengaduan<i class="fas fa-chevron-down"></i></a>
                                                             <ul class="dropdown-menu">
                                                                 <li><a href="{{ route('survey', 'kinerja-balai') }}"
@@ -269,7 +269,7 @@
                                                                         class="dropdown-item">e-PPID BWS KIV SMD</a></li>
                                                             </ul>
                                                         </li>
-{{-- 
+{{--
                                                 @foreach ($links as $link)
                                                     <li> <a target="_blank" href="{{ $link->link }}"
                                                             class="dropdown-item">{{ $link->title }}</a></li>

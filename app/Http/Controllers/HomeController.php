@@ -59,7 +59,14 @@ class HomeController extends Controller
     {
         $post = Halaman::where('id', $id)->where('active', '1')->firstOrFail();
 
-        return view('home.halaman.page', compact('post'));
+        if ($post->link_active == true) {
+            return redirect()->away($post->link);
+        } else {
+            return view('home.halaman.page', compact('post'));
+        }
+
+
+
     }
 
 

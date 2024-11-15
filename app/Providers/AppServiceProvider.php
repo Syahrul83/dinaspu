@@ -13,6 +13,7 @@ use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use Filament\Support\View\Components\Modal;
+use Datlechin\FilamentMenuBuilder\Models\Menu;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -29,6 +30,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+
+
+        $menu = Menu::location('header');
+        View::share('menu', $menu);
         Modal::closedByClickingAway(false);
         Post::observe(PostObserver::class);
         Paginator::useBootstrap();

@@ -8,6 +8,7 @@
         "php": "^8.2",
         "amidesfahani/filament-tinyeditor": "^2.0",
         "bezhansalleh/filament-shield": "^3.2",
+        "datlechin/filament-menu-builder": "^0.6.0",
         "filament/filament": "^3.2",
         "flowframe/laravel-trend": "^0.2.0",
         "laravel/framework": "^11.9",

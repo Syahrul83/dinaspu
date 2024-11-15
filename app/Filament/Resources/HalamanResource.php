@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use Filament\Forms;
 use Filament\Tables;
 use App\Models\Halaman;
+use Filament\Forms\Get;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
@@ -71,6 +72,17 @@ class HalamanResource extends Resource
 
                                     ])->default('1')
                                 ,
+                            ]),
+
+                        Forms\Components\Section::make()
+                            ->schema([
+                                Forms\Components\Checkbox::make('link_active')
+                                    ->label('Link Aktivasi')
+                                    ->live()
+                                    ->inline(),
+                                Forms\Components\TextInput::make('link')
+                                    ->hidden(fn(Get $get) => $get('link_active') == false)
+                                    ->label('Link Website'),
                             ]),
                     ])
                     ->columnSpan(['lg' => 1]),
