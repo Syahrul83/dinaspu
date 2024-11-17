@@ -13,7 +13,7 @@
                         </a>
                         <br>
                     @endif
-                    {{ $post->body }}
+                    {!! $post->body  !!}
                 </div>
 
 

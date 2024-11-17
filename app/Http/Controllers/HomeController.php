@@ -140,7 +140,7 @@ class HomeController extends Controller
 
 
 
-        return view('home.survey.laporan-survey', compact('posts', 'title'));
+        return view('home.layanan.laporan-survey', compact('posts', 'title'));
     }
 
 

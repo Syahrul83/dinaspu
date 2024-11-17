@@ -34,7 +34,7 @@ class SdaResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('title')->readOnly(),
+                Forms\Components\TextInput::make('title')->required(),
 
                 Forms\Components\FileUpload::make('file')
                     ->uploadingMessage('Uploading attachment...')
@@ -48,6 +48,11 @@ class SdaResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title'),
+                Tables\Columns\TextColumn::make('menu url')
+                    ->default(fn(Sda $sda) => '/sda/' . $sda->id ?? '')
+                    ->copyable()
+                    ->copyMessage('Color code copied')
+                    ->copyMessageDuration(1500),
                 Tables\Columns\TextColumn::make('file'),
 
 

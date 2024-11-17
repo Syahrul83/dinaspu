@@ -4,7 +4,7 @@
             <i class="fas fa-home"></i>
         </a>
     @else
-        <a href="{{ $item->url }}" class="dropdown-item">
+        <a href="{{ $item->url }}" target="{{ $item->target }}" class="dropdown-item">
             {{ $item->title }}
             @if ($item->children->isNotEmpty())
 

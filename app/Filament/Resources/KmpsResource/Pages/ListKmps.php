@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Filament\Resources\SdaResource\Pages;
+namespace App\Filament\Resources\KmpsResource\Pages;
 
-use App\Filament\Resources\SdaResource;
+use App\Filament\Resources\KmpsResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 
-class ListSdas extends ListRecords
+class ListKmps extends ListRecords
 {
-    protected static string $resource = SdaResource::class;
+    protected static string $resource = KmpsResource::class;
 
     protected function getHeaderActions(): array
     {

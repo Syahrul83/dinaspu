@@ -103,8 +103,11 @@ class HalamanResource extends Resource
 
                 ImageColumn::make('image')
                     ->height(50),
-                Tables\Columns\TextColumn::make('user.name')
-                    ->searchable(),
+                Tables\Columns\TextColumn::make('menu url')
+                    ->default(fn(Halaman $halaman) => '/page/' . $halaman->id ?? '')
+                    ->copyable()
+                    ->copyMessage('Color code copied')
+                    ->copyMessageDuration(1500),
                 Tables\Columns\ToggleColumn::make('active'),
 
                 Tables\Columns\TextColumn::make('created_at')
@@ -116,6 +119,7 @@ class HalamanResource extends Resource
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
+            ->defaultSort('id', 'desc')
             ->filters([
                 //
             ])

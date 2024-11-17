@@ -10,6 +10,8 @@
                 @include('home.halaman.visi')
             @elseif ($post->id == 3)
                 @include('home.halaman.struktur')
+            @elseif ($post->id == 29)
+                @include('home.halaman.kmps')
             @else
                 @include('home.halaman.defalut')
             @endif
