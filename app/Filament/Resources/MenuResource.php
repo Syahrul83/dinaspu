@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Filament\Plugins\Resources;
+namespace App\Filament\Resources;
 
 
 use Illuminate\Support\Facades\Auth;
