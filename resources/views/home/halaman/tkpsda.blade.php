@@ -1,5 +1,3 @@
-@extends('layout.app')
-@section('content')
 <br>
 @php
     $parts = explode('%', $post->body);
@@ -44,4 +42,3 @@
         </div>
     </div>
 </div>
-@endsection
