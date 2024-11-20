@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class PelayananDataResource extends Resource
 {
     protected static ?string $model = PelayananData::class;
+    protected static ?string $slug = 'pel-rekomtek';
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationGroup = 'Hasil Survey Kepuasan';

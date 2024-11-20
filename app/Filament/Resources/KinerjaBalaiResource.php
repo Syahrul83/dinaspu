@@ -16,7 +16,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class KinerjaBalaiResource extends Resource
 {
     protected static ?string $model = KinerjaBalai::class;
-    protected static ?string $slug = 'custom-user-list';
+    protected static ?string $slug = 'pel-info-pengaduan';
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 

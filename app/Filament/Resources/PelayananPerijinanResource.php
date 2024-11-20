@@ -18,7 +18,7 @@ class PelayananPerijinanResource extends Resource
     protected static ?string $model = PelayananPerijinan::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
+    protected static ?string $slug = 'pel-hidrologi-dan-kualitas-air';
     protected static ?string $navigationGroup = 'Hasil Survey Kepuasan';
 
     protected static ?string $navigationLabel = 'Pelayanan Hidrologi dan Kualitas Air';
