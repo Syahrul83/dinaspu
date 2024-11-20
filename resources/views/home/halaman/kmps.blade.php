@@ -14,7 +14,7 @@
                     style="animation-delay: 300ms;">Daftar Komunitas Masyarakat Peduli Sungai (KMPS)</a>
                 <div class="toggle-content">
                     @php
-                        $value = \App\Models\Kmps::orderBy('id', 'desc')->get();
+                        $value = \App\Models\kmps::orderBy('id', 'desc')->get();
                     @endphp
                     <p class="mx-2"> Sampai dengan saat ini Komunitas Masyarakat Peduli Sungai (KMPS) yang telah
                         terbentuk sebanyak {{ $value->count() }} KMPS dengan rincian sebagai berikut:. </p>
