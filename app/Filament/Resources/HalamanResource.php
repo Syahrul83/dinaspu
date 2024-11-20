@@ -6,6 +6,7 @@ use Filament\Forms;
 use Filament\Tables;
 use App\Models\Halaman;
 use Filament\Forms\Get;
+use App\Models\Menuitem;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
@@ -101,8 +102,16 @@ class HalamanResource extends Resource
                     ->searchable(),
 
 
-                ImageColumn::make('image')
-                    ->height(50),
+                Tables\Columns\TextColumn::make('Menu Name')
+                    ->default(
+
+                        function (Halaman $halaman) {
+                            $url = '/page/' . $halaman->id;
+                            $menu = Menuitem::where('url', $url)->first();
+                            return $menu->title ?? '';
+
+                        }
+                    ),
                 Tables\Columns\TextColumn::make('menu url')
                     ->default(fn(Halaman $halaman) => '/page/' . $halaman->id ?? '')
                     ->copyable()
@@ -125,6 +134,8 @@ class HalamanResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make()
+                    ->requiresConfirmation()
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

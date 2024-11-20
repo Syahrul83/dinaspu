@@ -2,16 +2,17 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\SdaResource\Pages;
-use App\Filament\Resources\SdaResource\RelationManagers;
 use App\Models\Sda;
 use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
+use App\Models\Menuitem;
+use Filament\Forms\Form;
 use Filament\Tables\Table;
+use Filament\Resources\Resource;
 use Illuminate\Database\Eloquent\Builder;
+use App\Filament\Resources\SdaResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\SdaResource\RelationManagers;
 
 class SdaResource extends Resource
 {
@@ -21,14 +22,14 @@ class SdaResource extends Resource
 
 
 
-    protected static ?string $navigationGroup = 'Publikasi';
+    protected static ?string $navigationGroup = 'Menu & Halaman';
 
-    protected static ?string $navigationLabel = 'Informasi SDA';
-    protected static ?string $pluralModelLabel = 'Informasi SDA';
+    protected static ?string $navigationLabel = 'Singel View PDF';
+    protected static ?string $pluralModelLabel = 'Singel View PDF';
 
-    protected ?string $heading = 'Informasi SDA';
+    protected ?string $heading = 'Singel View PDF';
 
-    protected static ?int $navigationSort = 1;
+    protected static ?int $navigationSort = 4;
 
     public static function form(Form $form): Form
     {
@@ -47,21 +48,35 @@ class SdaResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('No')->rowIndex(),
                 Tables\Columns\TextColumn::make('title'),
+                Tables\Columns\TextColumn::make('Menu Name')
+                    ->default(
+
+                        function (Sda $sda) {
+                            $url = '/singel-pdf/' . $sda->id;
+                            $menu = Menuitem::where('url', $url)->first();
+                            return $menu->title ?? '';
+
+                        }
+                    ),
                 Tables\Columns\TextColumn::make('menu url')
-                    ->default(fn(Sda $sda) => '/sda/' . $sda->id ?? '')
+                    ->default(fn(Sda $sda) => '/singel-pdf/' . $sda->id ?? '')
                     ->copyable()
                     ->copyMessage('Color code copied')
                     ->copyMessageDuration(1500),
-                Tables\Columns\TextColumn::make('file'),
 
 
-            ])->paginated(false)
+
+            ])->paginated(true)
+            ->defaultSort('id', 'desc')
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make()
+                    ->requiresConfirmation()
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

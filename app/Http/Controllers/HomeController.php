@@ -118,21 +118,21 @@ class HomeController extends Controller
 
     public function surveyKepuasan($name)
     {
-        if ($name == 'kinerja-balai') {
-            $title = 'LAPORAN SURVEY KEPUASAN KINERJA BALAI';
+        if ($name == 'pelayanan-informasi') {
+            $title = 'PELAYANAN INFORMASI DAN PENGADUAN';
             $posts = KinerjaBalai::latest()->paginate(15);
-        } elseif ($name == 'perijinan') {
-            $title = 'LAPORAN SURVEY KEPUASAN PELAYANAN PERIJINAN';
+        } elseif ($name == 'pelayanan-hidrologi') {
+            $title = 'PELAYANAN HIDROLOGI DAN KUALITAS AIR';
             $posts = PelayananPerijinan::latest()->paginate(15);
-        } elseif ($name == 'data') {
-            $title = 'LAPORAN SURVEY KEPUASAN PELAYANAN DATA';
+        } elseif ($name == 'pelayanan-rekomtek') {
+            $title = 'PELAYANAN REKOMTEK';
             $posts = PelayananData::latest()->paginate(15);
-        } elseif ($name == 'sda') {
-            $title = 'LAPORAN SURVEY KEPUASAN TATA KELOLA INFRASTRUKTUR SDA';
-            $posts = PelayananSda::latest()->paginate(15);
-        } elseif ($name == 'barang-jasa') {
-            $title = 'LAPORAN SURVEY KEPUASAN LAYANAN PENGADAAN BARANG DAN JASA';
-            $posts = PelayananPegadaan::latest()->paginate(15);
+            // } elseif ($name == 'sda') {
+            //     $title = 'LAPORAN SURVEY KEPUASAN TATA KELOLA INFRASTRUKTUR SDA';
+            //     $posts = PelayananSda::latest()->paginate(15);
+            // } elseif ($name == 'barang-jasa') {
+            //     $title = 'LAPORAN SURVEY KEPUASAN LAYANAN PENGADAAN BARANG DAN JASA';
+            //     $posts = PelayananPegadaan::latest()->paginate(15);
         } elseif ($name == 'pasca-bencana') {
             $title = ' LAPORAN SURVEY KEPUASAN TANGGAP DARURAT PASCA BENCANA';
             $posts = PelayananBencana::latest()->paginate(15);

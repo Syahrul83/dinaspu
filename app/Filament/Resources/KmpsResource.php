@@ -19,6 +19,17 @@ class KmpsResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+
+    protected static ?string $navigationGroup = 'Menu & Halaman';
+
+    protected static ?string $navigationLabel = 'Komunitas Peduli Sungai PDF';
+    protected static ?string $pluralModelLabel = 'Komunitas Peduli Sungai PDF';
+
+    protected ?string $heading = 'Komunitas Peduli Sungai PDF';
+    protected static ?int $navigationSort = 2;
+
+
+
     public static function form(Form $form): Form
     {
         return $form

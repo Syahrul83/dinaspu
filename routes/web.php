@@ -19,14 +19,14 @@ Route::get('/lokasi', function () {
     return view('home.halaman.lokasi');
 })->name('lokasi');
 
-Route::get('/sda/{id}', [HomeController::class, 'sda'])->name('sda');
+Route::get('/singel-pdf/{id}', [HomeController::class, 'sda'])->name('sda');
 
 
 Route::get('/publikasi/{name}', [HomeController::class, 'lapSatgas'])->name('lapSatgas');
 
 Route::get('/galleri/{name}', [HomeController::class, 'galleri'])->name('galleri');
 
-Route::get('/hasil-survey-kepuasan/{name}', [HomeController::class, 'surveyKepuasan'])->name('survey');
+Route::get('/survey/{name}', [HomeController::class, 'surveyKepuasan'])->name('survey');
 
 
 // Route::get('/tes', function () {
