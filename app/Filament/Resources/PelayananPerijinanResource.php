@@ -21,10 +21,10 @@ class PelayananPerijinanResource extends Resource
 
     protected static ?string $navigationGroup = 'Hasil Survey Kepuasan';
 
-    protected static ?string $navigationLabel = 'Pelayanan Perijinan';
-    protected static ?string $pluralModelLabel = 'Pelayanan Perijinan';
+    protected static ?string $navigationLabel = 'Pelayanan Hidrologi dan Kualitas Air';
+    protected static ?string $pluralModelLabel = 'Pelayanan Hidrologi dan Kualitas Air';
 
-    protected ?string $heading = 'Pelayanan Perijinan';
+    protected ?string $heading = 'Pelayanan Hidrologi dan Kualitas Air';
 
     protected static ?int $navigationSort = 2;
 
@@ -36,7 +36,7 @@ class PelayananPerijinanResource extends Resource
                 Forms\Components\FileUpload::make('file')->required()
                     ->uploadingMessage('Uploading attachment...')
                     ->acceptedFileTypes(['application/pdf'])
-                    ->directory('pelayanan_perijinan'),
+                    ->directory('pel_hidrologi'),
             ]);
     }
 

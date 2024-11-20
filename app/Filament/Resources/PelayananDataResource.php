@@ -20,10 +20,10 @@ class PelayananDataResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationGroup = 'Hasil Survey Kepuasan';
 
-    protected static ?string $navigationLabel = 'Pelayanan Data';
-    protected static ?string $pluralModelLabel = 'Pelayanan Data';
+    protected static ?string $navigationLabel = 'Pelayanan Rekomtek';
+    protected static ?string $pluralModelLabel = 'Pelayanan Rekomtek';
 
-    protected ?string $heading = 'Pelayanan Data';
+    protected ?string $heading = 'Pelayanan Rekomtek';
 
     protected static ?int $navigationSort = 3;
 
@@ -35,7 +35,7 @@ class PelayananDataResource extends Resource
                 Forms\Components\FileUpload::make('file')->required()
                     ->uploadingMessage('Uploading attachment...')
                     ->acceptedFileTypes(['application/pdf'])
-                    ->directory('pelayanan_data'),
+                    ->directory('pel_rekomtek'),
             ]);
     }
 

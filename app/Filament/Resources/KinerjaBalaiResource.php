@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class KinerjaBalaiResource extends Resource
 {
     protected static ?string $model = KinerjaBalai::class;
+    protected static ?string $slug = 'custom-user-list';
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -23,10 +24,10 @@ class KinerjaBalaiResource extends Resource
 
     protected static ?string $navigationGroup = 'Hasil Survey Kepuasan';
 
-    protected static ?string $navigationLabel = 'Kinerja Balai';
-    protected static ?string $pluralModelLabel = 'Kinerja Balai';
+    protected static ?string $navigationLabel = 'Pelayanan Informasi dan Pengaduan';
+    protected static ?string $pluralModelLabel = 'Pelayanan Informasi dan Pengaduan';
 
-    protected ?string $heading = 'Kinerja Balai';
+    protected ?string $heading = 'Pelayanan Informasi dan Pengaduan';
 
     protected static ?int $navigationSort = 1;
 
@@ -39,7 +40,7 @@ class KinerjaBalaiResource extends Resource
                 Forms\Components\FileUpload::make('file')->required()
                     ->uploadingMessage('Uploading attachment...')
                     ->acceptedFileTypes(['application/pdf'])
-                    ->directory('kinerja_balai'),
+                    ->directory('pel_info_pengaduan'),
             ]);
     }
 
