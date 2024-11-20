@@ -12,6 +12,8 @@
                 @include('home.halaman.struktur')
             @elseif ($post->id == 29)
                 @include('home.halaman.kmps')
+            @elseif ($post->id == 6)
+                @include('home.halaman.tkpsda')
             @else
                 @include('home.halaman.defalut')
             @endif
