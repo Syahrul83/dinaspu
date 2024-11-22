@@ -10,10 +10,20 @@ class StatsOverview extends BaseWidget
 {
     protected function getStats(): array
     {
+
+        $user = auth()->user();
+        $role = $user->getRoleNames()->first();
+        $query = Post::select('id');
+
+        if ($role !== 'super_admin' && $role !== 'admin') {
+            $query->where('user_id', $user->id);
+        }
+
         return [
-            Stat::make('Total Post', Post::select('id')->count()),
-            Stat::make('Publish', Post::select('id')->where('status', '=', 'publish')->count()),
-            Stat::make('Darft', Post::select('id')->where('status', '=', 'draft')->count()),
+            Stat::make('Total Post', (clone $query)->count()),
+            Stat::make('Publish', (clone $query)->where('status', 'publish')->count()),
+            Stat::make('Darft', (clone $query)->where('status', 'draft')->count()),
         ];
+
     }
 }
