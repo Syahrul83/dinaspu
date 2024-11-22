@@ -63,7 +63,7 @@ class SdaResource extends Resource
                 Tables\Columns\TextColumn::make('menu url')
                     ->default(fn(Sda $sda) => '/singel-pdf/' . $sda->id ?? '')
                     ->copyable()
-                    ->copyMessage('Color code copied')
+                    ->copyMessage('Url Link Copied')
                     ->copyMessageDuration(1500),
 
 

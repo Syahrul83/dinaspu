@@ -115,7 +115,7 @@ class HalamanResource extends Resource
                 Tables\Columns\TextColumn::make('menu url')
                     ->default(fn(Halaman $halaman) => '/page/' . $halaman->id ?? '')
                     ->copyable()
-                    ->copyMessage('Color code copied')
+                    ->copyMessage('Url Link Copied')
                     ->copyMessageDuration(1500),
                 Tables\Columns\ToggleColumn::make('active'),
 
