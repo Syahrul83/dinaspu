@@ -15,9 +15,9 @@ class StatsOverview extends BaseWidget
         $role = $user->getRoleNames()->first();
         $query = Post::select('id');
 
-        if ($role !== 'super_admin' && $role !== 'admin') {
-            $query->where('user_id', $user->id);
-        }
+        // if ($role !== 'super_admin' && $role !== 'admin') {
+        //     $query->where('user_id', $user->id);
+        // }
 
         return [
             Stat::make('Total Post', (clone $query)->count()),
