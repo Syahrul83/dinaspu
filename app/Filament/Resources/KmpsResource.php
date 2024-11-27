@@ -15,7 +15,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class KmpsResource extends Resource
 {
-    protected static ?string $model = Kmps::class;
+    protected static ?string $model = kmps::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
