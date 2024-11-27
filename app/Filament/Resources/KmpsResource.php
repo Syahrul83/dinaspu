@@ -4,7 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\KmpsResource\Pages;
 use App\Filament\Resources\KmpsResource\RelationManagers;
-use App\Models\Kmps;
+use App\Models\kmps;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
