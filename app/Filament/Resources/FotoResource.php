@@ -41,7 +41,7 @@ class FotoResource extends Resource
                     ->directory('foto')
                     ->imageResizeMode('cover')
                     ->imageResizeTargetWidth('750')
-                    ->maxSize(2024)
+                    ->maxSize(1024)
                     ->columnSpanFull(),
             ]);
     }

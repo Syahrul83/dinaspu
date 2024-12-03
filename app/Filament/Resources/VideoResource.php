@@ -39,7 +39,7 @@ class VideoResource extends Resource
                     ->directory('video')
                     ->imageResizeMode('cover')
                     ->imageResizeTargetWidth('750')
-                    ->maxSize(2024),
+                    ->maxSize(1024),
 
             ]);
     }
