@@ -1,4 +1,12 @@
 <!-- isi -->
+<style>
+    .modal-backdrop {
+        opacity: 0 !important;
+        /* Make it fully transparent */
+        visibility: hidden !important;
+        /* Ensure it's not visible */
+    }
+</style>
 <div class="container py-3">
     <div class="row">
         <div class="col-12 col-lg-12 appear-animation animated fadeInLeftShorter appear-animation-visible"
