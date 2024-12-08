@@ -3,7 +3,7 @@
 
 <h3 class="text-center mt-4">{{ $post->title }}</h3>
 <hr>
-@if (empty($post->file) || !Storage::exists('public/' . $post->file))
+@if (empty($post->file) || !file_exists('storage/' . $post->file))
     <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
         <h1>NO DATA PDF</h1>
     </div>
