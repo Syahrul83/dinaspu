@@ -2,7 +2,7 @@
     <x-filament::section>
         <div class="flex items-center gap-x-3">
             <div class="flex-1">
-                <a href="#" rel="noopener noreferrer" target="_blank">
+                <a href="/manual/book.pdf" rel="noopener noreferrer" target="_blank">
                     <b> <span class="font-sans hover:font-serif"> Manual Book </span></b>
                 </a>
 
@@ -12,7 +12,7 @@
             </div>
 
             <div class="flex flex-col items-end gap-y-1">
-                <x-filament::link color="gray" href="#" icon="heroicon-m-book-open"
+                <x-filament::link color="gray" href="/manual/book.pdf" icon="heroicon-m-book-open"
                     icon-alias="panels::widgets.filament-info.open-documentation-button" rel="noopener noreferrer"
                     target="_blank">
                     {{ __('filament-panels::widgets/filament-info-widget.actions.open_documentation.label') }}
